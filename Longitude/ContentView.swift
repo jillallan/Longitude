@@ -12,7 +12,12 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     
     var body: some View {
-        Text("Hello Longitude")
+        TabView {
+            TripsView()
+                .tabItem {
+                    Label("Trips", image: "")
+                }
+        }
     }
 }
 
