@@ -13,20 +13,34 @@ struct TripCardOverlay: View {
     let endDate: String
     
     var body: some View {
-        VStack {
-            HStack {
+        
+        // TODO: Place colour / text based on background
+        HStack {
+            VStack(alignment: .leading) {
+                Spacer()
                 Text(title)
                     .font(.largeTitle)
-                    .foregroundStyle(.white)
-                Text(startDate)
-                Spacer()
+                    
+                Text(startDate) + Text(" - ") + Text(endDate)
+                
             }
             Spacer()
         }
         .padding()
+        .foregroundStyle(.white)
+    }
+}
+
+
+struct TripCardOverlay_Previews: PreviewProvider {
+    static var previews: some View {
+        TripCardOverlay(title: Trip.preview.title, startDate: Trip.preview.startDateString, endDate: Trip.preview.endDateString)
+            .background {
+                Image(.mongolia)
+            }
     }
 }
 
 //#Preview {
-//    TripCardOverlay(title: "Mongolia", startDate: Date.now, endDate: Date.now)
+//    TripCardOverlay(title: Trip.preview.title, startDate: Trip.preview.startDateString, endDate: Trip.preview.endDateString)
 //}
