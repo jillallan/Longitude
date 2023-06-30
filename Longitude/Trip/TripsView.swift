@@ -36,16 +36,12 @@ struct TripsView: View {
             .safeAreaPadding(.horizontal, 20)
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
+            .scrollPosition(initialAnchor: .trailing)
             
             // MARK: - Navigation
             .navigationTitle("Trips")
             .navigationDestination(for: Trip.self) { trip in
-                // TODO: Add TripView
-                TripCard(
-                    title: trip.title,
-                    startDate: trip.startDateString,
-                    endDate: trip.endDateString
-                )
+                TripView(title: trip.title)
             }
             .toolbar {
                 Button {
