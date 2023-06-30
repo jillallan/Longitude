@@ -17,7 +17,7 @@ final class Visit {
     
     // MARK: - Relationships
     var steps: Step?
-    // TODO: Add trip relationship
+    var activity: Activity?
     
     init(arrivalDate: Date, departureDate: Date) {
         self.arrivalDate = arrivalDate
