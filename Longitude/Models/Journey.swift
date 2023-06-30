@@ -17,7 +17,7 @@ final class Journey {
     
     // MARK: - Relationships
     var steps: [Step]? = []
-    // TODO: Add trip relationship
+    var activity: Activity?
     
     // MARK: - Computed Properties
     var journeySteps: [Step] {
