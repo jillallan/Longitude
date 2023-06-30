@@ -12,11 +12,24 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     
     var body: some View {
-        Text("Hello Longitude")
+        TabView {
+            TripsView()
+                .tabItem {
+                    Label("Trips", image: "")
+                }
+        }
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Trip.self, inMemory: true)
+
+//#Preview {
+//    ContentView()
+//        .modelContainer(PreviewContainer.preview)
+//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .modelContainer(PreviewContainer.preview)
+    }
 }
