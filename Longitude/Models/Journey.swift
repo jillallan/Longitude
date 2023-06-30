@@ -6,3 +6,27 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+final class Journey {
+    
+    // MARK: - Properties
+    var departureDate: Date
+    var arrivalDate: Date
+    
+    // MARK: - Relationships
+    var steps: [Step]? = []
+    // TODO: Add trip relationship
+    
+    // MARK: - Computed Properties
+    var journeySteps: [Step] {
+        steps?.sorted() ?? []
+    }
+    
+    // MARK: - Initialization
+    init(departureDate: Date, arrivalDate: Date) {
+        self.departureDate = departureDate
+        self.arrivalDate = arrivalDate
+    }
+}
