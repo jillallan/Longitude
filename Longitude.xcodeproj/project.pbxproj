@@ -21,6 +21,7 @@
 		78E053362A4EDF7F008781BF /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053352A4EDF7F008781BF /* Visit.swift */; };
 		78E053382A4EDF85008781BF /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053372A4EDF85008781BF /* Journey.swift */; };
 		78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053392A4EDF8A008781BF /* Trip.swift */; };
+		78E0533C2A4EF76A008781BF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533B2A4EF76A008781BF /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		78E053352A4EDF7F008781BF /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		78E053372A4EDF85008781BF /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		78E053392A4EDF8A008781BF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		78E0533B2A4EF76A008781BF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				78E053352A4EDF7F008781BF /* Visit.swift */,
 				78E053372A4EDF85008781BF /* Journey.swift */,
 				78E053392A4EDF8A008781BF /* Trip.swift */,
+				78E0533B2A4EF76A008781BF /* Activity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E0533C2A4EF76A008781BF /* Activity.swift in Sources */,
 				78E053022A4ED5C9008781BF /* Item.swift in Sources */,
 				78E053312A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift in Sources */,
 				78E0532E2A4EDBAF008781BF /* Step.swift in Sources */,
