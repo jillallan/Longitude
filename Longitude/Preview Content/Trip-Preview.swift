@@ -10,6 +10,23 @@ import SwiftData
 
 extension Trip {
     
+    @MainActor
+    static var preview: Trip = {
+        previews[1]
+    }()
+
+    @MainActor
+    static var previews: [Trip] = {
+        let fetchDescriptor = FetchDescriptor<Trip>()
+        do {
+            let trips = try PreviewContainer.preview.mainContext.fetch(fetchDescriptor)
+            return trips
+        } catch {
+            fatalError("Error fetching trip in Trip Preview: \(error.localizedDescription)")
+        }
+        
+    }()
+    
     static func createSampleData(modelContext: ModelContext) -> [Trip] {
         var components = DateComponents()
         let calendar = Calendar.current
