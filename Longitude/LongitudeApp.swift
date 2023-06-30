@@ -15,6 +15,6 @@ struct LongitudeApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Item.self)
+        .modelContainer(for: Trip.self)
     }
 }
