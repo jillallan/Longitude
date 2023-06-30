@@ -15,6 +15,13 @@ struct LongitudeApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Trip.self)
+        .modelContainer(for: [Trip.self], inMemory: true) { result in
+            switch result {
+            case .success(let container):
+                SampleData.createData(modelContext: container.mainContext)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

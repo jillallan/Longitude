@@ -11,7 +11,7 @@ import SwiftUI
 struct TripsView: View {
     
     // MARK: - Properties
-    @Query private var trips: [Trip]
+    @Query(sort: \.startDate) private var trips: [Trip]
     @State private var isAddTripViewPresented: Bool = false
     
     var body: some View {
@@ -55,7 +55,7 @@ struct TripsView: View {
                 }
             }
             .sheet(isPresented: $isAddTripViewPresented) {
-                // TODO: Add AddTripView
+                AddTripView()
             }
         }
     }

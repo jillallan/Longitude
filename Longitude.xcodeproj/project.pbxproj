@@ -27,6 +27,7 @@
 		78E053482A4F292F008781BF /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053472A4F292F008781BF /* TripsView.swift */; };
 		78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053492A4F2BC4008781BF /* TripCard.swift */; };
 		78E0534C2A4F2D59008781BF /* TripCardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */; };
+		78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0534D2A4F5F23008781BF /* AddTripView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		78E053472A4F292F008781BF /* TripsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
 		78E053492A4F2BC4008781BF /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
 		78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardOverlay.swift; sourceTree = "<group>"; };
+		78E0534D2A4F5F23008781BF /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				78E053472A4F292F008781BF /* TripsView.swift */,
 				78E053492A4F2BC4008781BF /* TripCard.swift */,
 				78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */,
+				78E0534D2A4F5F23008781BF /* AddTripView.swift */,
 				78E053052A4ED5CA008781BF /* Assets.xcassets */,
 				78E053072A4ED5CA008781BF /* Longitude.entitlements */,
 				78E0530B2A4ED5CA008781BF /* Info.plist */,
@@ -331,6 +334,7 @@
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
 				78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */,
 				78E053362A4EDF7F008781BF /* Visit.swift in Sources */,
+				78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
