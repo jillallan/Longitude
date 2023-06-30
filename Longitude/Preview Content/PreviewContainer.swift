@@ -8,10 +8,9 @@
 import Foundation
 import SwiftData
 
-
+@MainActor
 struct PreviewContainer {
     
-    @MainActor
     static var preview: ModelContainer = {
         do {
             let container = try ModelContainer(

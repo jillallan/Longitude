@@ -26,6 +26,12 @@ struct TripCard: View {
     }
 }
 
+struct TripCard_Previews: PreviewProvider {
+    static var previews: some View {
+        TripCard(title: Trip.preview.title, startDate: Trip.preview.startDateString, endDate: Trip.preview.endDateString)
+    }
+}
+
 //#Preview {
-//    TripCard(title: "Mongolia", startDate: String(describing: Date.now), endDate: Date.now)
+//    TripCard(title: Trip.preview, startDate: Trip.preview.startDateString, endDate: Trip.preview.endDateString)
 //}
