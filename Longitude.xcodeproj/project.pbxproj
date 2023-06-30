@@ -21,7 +21,9 @@
 		78E053382A4EDF85008781BF /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053372A4EDF85008781BF /* Journey.swift */; };
 		78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053392A4EDF8A008781BF /* Trip.swift */; };
 		78E0533C2A4EF76A008781BF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533B2A4EF76A008781BF /* Activity.swift */; };
-		78E0533E2A4F011A008781BF /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533D2A4F011A008781BF /* TripsView.swift */; };
+		78E053402A4F0371008781BF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533F2A4F0371008781BF /* SampleData.swift */; };
+		78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053432A4F16C0008781BF /* Trip-Preview.swift */; };
+		78E053462A4F1B23008781BF /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053452A4F1B23008781BF /* PreviewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,9 @@
 		78E053372A4EDF85008781BF /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		78E053392A4EDF8A008781BF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		78E0533B2A4EF76A008781BF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		78E0533D2A4F011A008781BF /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		78E0533F2A4F0371008781BF /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		78E053432A4F16C0008781BF /* Trip-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip-Preview.swift"; sourceTree = "<group>"; };
+		78E053452A4F1B23008781BF /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				78E053092A4ED5CA008781BF /* Preview Assets.xcassets */,
+				78E0533F2A4F0371008781BF /* SampleData.swift */,
+				78E053452A4F1B23008781BF /* PreviewContainer.swift */,
+				78E053432A4F16C0008781BF /* Trip-Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -304,7 +311,10 @@
 				78E0533C2A4EF76A008781BF /* Activity.swift in Sources */,
 				78E053312A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift in Sources */,
 				78E0532E2A4EDBAF008781BF /* Step.swift in Sources */,
+				78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */,
+				78E053402A4F0371008781BF /* SampleData.swift in Sources */,
 				78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */,
+				78E053462A4F1B23008781BF /* PreviewContainer.swift in Sources */,
 				78E053002A4ED5C9008781BF /* LongitudeApp.swift in Sources */,
 				78E0533E2A4F011A008781BF /* TripsView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
