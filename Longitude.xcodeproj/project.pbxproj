@@ -29,6 +29,8 @@
 		78E0534C2A4F2D59008781BF /* TripCardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */; };
 		78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0534D2A4F5F23008781BF /* AddTripView.swift */; };
 		78E053512A4F6646008781BF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053502A4F6646008781BF /* TripView.swift */; };
+		78E053532A4F6990008781BF /* Visit-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053522A4F6990008781BF /* Visit-Preview.swift */; };
+		78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053542A4F6AFD008781BF /* Step-Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardOverlay.swift; sourceTree = "<group>"; };
 		78E0534D2A4F5F23008781BF /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		78E053502A4F6646008781BF /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		78E053522A4F6990008781BF /* Visit-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Visit-Preview.swift"; sourceTree = "<group>"; };
+		78E053542A4F6AFD008781BF /* Step-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step-Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				78E0533F2A4F0371008781BF /* SampleData.swift */,
 				78E053452A4F1B23008781BF /* PreviewContainer.swift */,
 				78E053432A4F16C0008781BF /* Trip-Preview.swift */,
+				78E053522A4F6990008781BF /* Visit-Preview.swift */,
+				78E053542A4F6AFD008781BF /* Step-Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E053532A4F6990008781BF /* Visit-Preview.swift in Sources */,
 				78E0533C2A4EF76A008781BF /* Activity.swift in Sources */,
 				78E053312A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift in Sources */,
 				78E0532E2A4EDBAF008781BF /* Step.swift in Sources */,
@@ -345,6 +352,7 @@
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
 				78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */,
+				78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */,
 				78E053362A4EDF7F008781BF /* Visit.swift in Sources */,
 				78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */,
 			);

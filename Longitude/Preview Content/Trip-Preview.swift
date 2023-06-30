@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 
 extension Trip {
+    // TODO: Update to match step preview
     
     @MainActor
     static var preview: Trip = {
