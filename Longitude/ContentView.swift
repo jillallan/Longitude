@@ -21,7 +21,15 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Trip.self, inMemory: true)
+
+//#Preview {
+//    ContentView()
+//        .modelContainer(PreviewContainer.preview)
+//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .modelContainer(PreviewContainer.preview)
+    }
 }

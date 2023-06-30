@@ -24,6 +24,14 @@ final class Trip {
         activities?.sorted() ?? []
     }
     
+    var startDateString: String {
+        startDate.formatted(date: .abbreviated, time: .omitted)
+    }
+    
+    var endDateString: String {
+        endDate.formatted(date: .abbreviated, time: .omitted)
+    }
+    
     init(startDate: Date, endDate: Date, title: String) {
         self.startDate = startDate
         self.endDate = endDate
