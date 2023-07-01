@@ -17,6 +17,7 @@ struct TripView: View {
         Map(position: $position) {
             // TODO: Add annotations for visits and steps
         }
+        // TODO: Add scroll view for visits and jorneys.  Click on a journey to get steps for the journey and edit them
         
         // TODO: Enable renaming trip
             .navigationTitle(title)

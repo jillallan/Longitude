@@ -11,6 +11,7 @@ import SwiftData
 struct SampleData {
     @MainActor
     static func createData(modelContext: ModelContext) {
-        let trips = Trip.createSampleData(modelContext: modelContext)
+//        let trips = Trip.createSampleData(modelContext: modelContext)
+        Trip.createSampleData(modelContext: modelContext)
     }
 }
