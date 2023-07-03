@@ -16,8 +16,12 @@ final class Visit {
     var departureDate: Date
     
     // MARK: - Relationships
-    var steps: Step?
+    var step: Step?
     var activity: Activity?
+    
+    // MARK: - Computed Properties
+    // TODO: Add stringArrivalDate and stringDepartureDate
+    // TODO: Add length of visit
     
     init(arrivalDate: Date, departureDate: Date) {
         self.arrivalDate = arrivalDate

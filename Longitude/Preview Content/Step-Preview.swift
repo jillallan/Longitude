@@ -32,8 +32,9 @@ extension Step {
         let calendar = Calendar.current
         
         let coordinates = [
-            (2016, 7, 27, 9, 0, 21.00, 0.00),
-            (2016, 7, 27, 9, 10, 28.00, 0.55)
+            (2016, 7, 28, 8, 6, 51.436027524806505, -2.597474502627349),
+            (2016, 7, 28, 8, 27, 51.436027524806505, -2.597474502627349),
+            (2016, 7, 28, 8, 35, 51.44951557518499, -2.5805171838600933),
         ]
         
         let _ = coordinates.map { (year, month, day, hour, minute, latitude, longitude) in
@@ -46,6 +47,8 @@ extension Step {
             let date = calendar.date(from: components) ?? Date.now
             
             let step = Step(timestamp: date, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+            
+            // TODO: Add placemark
             modelContext.insert(step)
         }
     }

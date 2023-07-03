@@ -13,9 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            TripsView()
+            TripView()
                 .tabItem {
-                    Label("Trips", image: "")
+                    Label("Trips", systemImage: "suitcase")
+                }
+            StepView()
+                .tabItem {
+                    Label("Steps", systemImage: "figure.walk")
+                }
+            VisitView()
+                .tabItem {
+                    Label("Visits", systemImage: "house")
                 }
         }
     }

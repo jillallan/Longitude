@@ -5,29 +5,70 @@
 //  Created by Jill Allan on 30/06/2023.
 //
 
-import MapKit
+import SwiftData
 import SwiftUI
 
 struct TripView: View {
-    let title: String
     
-    @State private var position: MapCameraPosition = .automatic
+    // MARK: - Properties
+    @Query(sort: \.startDate) private var trips: [Trip]
+    @State private var isAddTripViewPresented: Bool = false
     
     var body: some View {
-        Map(position: $position) {
-            // TODO: Add annotations for visits and steps
+        NavigationStack {
+            
+            // MARK: - View
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 10) {
+                    ForEach(trips) { trip in
+                        NavigationLink(value: trip) {
+                            TripCard(
+                                title: trip.title,
+                                startDate: trip.startDateString,
+                                endDate: trip.endDateString
+                            )
+                            .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
+                        }
+                    }
+                }
+                .scrollTargetLayout()
+            }
+            .safeAreaPadding(.horizontal, 20)
+            .scrollIndicators(.hidden)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollPosition(initialAnchor: .trailing)
+            
+            // MARK: - Navigation
+            .navigationTitle("Trips")
+            .navigationDestination(for: Trip.self) { trip in
+                TripDetailView(title: trip.title)
+            }
+            .toolbar {
+                Button {
+                    isAddTripViewPresented.toggle()
+                } label: {
+                    Label("Add Trip", systemImage: "plus")
+                }
+            }
+            .sheet(isPresented: $isAddTripViewPresented) {
+                AddTripView()
+            }
         }
-        // TODO: Add scroll view for visits and jorneys.  Click on a journey to get steps for the journey and edit them
-        
-        // TODO: Enable renaming trip
-            .navigationTitle(title)
     }
 }
 
 struct TripView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            TripView(title: Trip.preview.title)
+            TripView()
+                .modelContainer(PreviewContainer.preview)
         }
     }
 }
+
+//#Preview {
+//    NavigationStack {
+//        TripsView()
+//            .modelContainer(PreviewContainer.preview)
+//    }
+//}
