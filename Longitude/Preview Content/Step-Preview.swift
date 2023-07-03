@@ -31,13 +31,9 @@ extension Step {
         var components = DateComponents()
         let calendar = Calendar.current
         
-        let coordinates = [
-            (2016, 7, 28, 8, 6, 51.436027524806505, -2.597474502627349),
-            (2016, 7, 28, 8, 27, 51.436027524806505, -2.597474502627349),
-            (2016, 7, 28, 8, 35, 51.44951557518499, -2.5805171838600933),
-        ]
+//        let locations = SampleData.locations
         
-        let _ = coordinates.map { (year, month, day, hour, minute, latitude, longitude) in
+        let _ = SampleData.locations.map { (year, month, day, hour, minute, latitude, longitude, placemarkName) in
             components.year = year
             components.month = month
             components.day = day
@@ -47,9 +43,20 @@ extension Step {
             let date = calendar.date(from: components) ?? Date.now
             
             let step = Step(timestamp: date, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
-            
-            // TODO: Add placemark
             modelContext.insert(step)
+            
+            let epsilon = 0.000002
+
+            let fetchDescriptor = FetchDescriptor<Placemark>(predicate: #Predicate { placemark in
+                placemark.coordinate.latitude < latitude + epsilon && placemark.coordinate.latitude > latitude - epsilon &&
+                placemark.coordinate.longitude < longitude + epsilon && placemark.coordinate.longitude > longitude - epsilon
+            })
+            do {
+                let placemark = try modelContext.fetch(fetchDescriptor).first
+                step.placemark = placemark
+            } catch {
+                fatalError("failed to fetch placemark to assign to Step: \(error.localizedDescription)")
+            }
         }
     }
 }

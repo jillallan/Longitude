@@ -33,7 +33,7 @@ final class Placemark {
     var steps: [Step]? = []
 
     // MARK: - Initialization
-    init(coordinate: CLLocationCoordinate2D, name: String, subThoroughfare: String? = nil, thoroughfare: String? = nil, subAdministrativeArea: String? = nil, administrativeArea: String? = nil, subLocality: String? = nil, locality: String? = nil, postalCode: String? = nil, country: String? = nil, isoCountryCode: String? = nil, inlandWater: String? = nil, ocean: String? = nil, areaOfInterest: String? = nil, createdDate: Date, steps: [Step]? = nil) {
+    init(coordinate: CLLocationCoordinate2D, name: String, subThoroughfare: String? = nil, thoroughfare: String? = nil, subAdministrativeArea: String? = nil, administrativeArea: String? = nil, subLocality: String? = nil, locality: String? = nil, postalCode: String? = nil, country: String? = nil, isoCountryCode: String? = nil, inlandWater: String? = nil, ocean: String? = nil, areaOfInterest: String? = nil, createdDate: Date) {
         self.coordinate = coordinate
         self.name = name
         self.subThoroughfare = subThoroughfare
@@ -49,6 +49,5 @@ final class Placemark {
         self.ocean = ocean
         self.areaOfInterest = areaOfInterest
         self.createdDate = createdDate
-        self.steps = steps
     }
 }

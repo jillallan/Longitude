@@ -18,7 +18,7 @@ struct PreviewContainer {
                 ModelConfiguration(inMemory: true)
             )
             
-            SampleData.createData(modelContext: container.mainContext)
+            SamplePersistanceStore.createData(modelContext: container.mainContext)
 
             return container
             

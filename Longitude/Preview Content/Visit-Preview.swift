@@ -34,39 +34,36 @@ extension Visit {
         let calendar = Calendar.current
         
         let visitDetails = [
-            (2016, 7, 27, 9, 0, 0, 1, 51.436027524806505, -2.597474502627349, "St Johns Lane"),
-            (2016, 7, 27, 9, 45, 0, 30, 51.436027524806505, -2.597474502627349, "Bedminster Station"),
-            (2016, 7, 27, 10, 30, 0, 30, 51.436027524806505, -2.597474502627349, "Temple Meads")
+            (2016, 7, 28, 8, 0, 0, 7),  // St Johns Lane
+            (2016, 7, 28, 8, 20, 0, 10),  // Bedminster Station
+            (2016, 7, 28, 8, 40, 0, 55),  // Temple Meads
+            (2016, 7, 28, 11, 7, 0, 5),  // Paddington
+            (2016, 7, 28, 11, 24, 1, 0),  // St Pancras
         ]
         
-        let _ = visitDetails.map { (year, month, day, hour, minute, hours, minutes, latitude, longitude, title) in
+        let _ = visitDetails.map { (year, month, day, hour, minute, hours, minutes) in
             components.year = year
             components.month = month
             components.day = day
             
-            let startDate = calendar.date(from: components) ?? Date.now
-            let tempDate = calendar.date(byAdding: .hour, value: hours, to: startDate) ?? Date.now
-            let endDate = calendar.date(byAdding: .minute, value: minutes, to: tempDate) ?? Date.now
+            let arrivalDate = calendar.date(from: components) ?? Date.now
+            let tempDate = calendar.date(byAdding: .hour, value: hours, to: arrivalDate) ?? Date.now
+            let departureDate = calendar.date(byAdding: .minute, value: minutes, to: tempDate) ?? Date.now
             
-            let epsilon = 0.000002
+            let visit = Visit(arrivalDate: arrivalDate, departureDate: departureDate)
+            modelContext.insert(visit)
 
+            // fetch step to add to visit based on the date
             let fetchDescriptor = FetchDescriptor<Step>(predicate: #Predicate { step in
-                step.coordinate.latitude < latitude + epsilon && step.coordinate.latitude > latitude - epsilon &&
-                step.coordinate.longitude < longitude + epsilon && step.coordinate.longitude > longitude - epsilon
+                step.timestamp >= arrivalDate && step.timestamp <= departureDate
             })
+            
             do {
                 let step = try modelContext.fetch(fetchDescriptor).first
-                let visit = Visit(arrivalDate: startDate, departureDate: endDate)
-                modelContext.insert(visit)
                 visit.step = step
             } catch {
                 fatalError("failed to fetch step to assign to Visit: \(error.localizedDescription)")
             }
-            
-//            let step = Step(timestamp: startDate, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
-//            modelContext.insert(step)
-            
-            
         }
     }
 }

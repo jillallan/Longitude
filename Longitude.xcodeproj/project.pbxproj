@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		787940DC2A52B113006D9CB5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DB2A52B113006D9CB5 /* StepView.swift */; };
 		787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DE2A52B6B2006D9CB5 /* VisitView.swift */; };
+		78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497932A52E9B5007A489C /* Placemark-Preview.swift */; };
+		78D497962A52EA7A007A489C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497952A52EA7A007A489C /* SampleData.swift */; };
+		78D497992A52F199007A489C /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497982A52F199007A489C /* PlacemarkView.swift */; };
 		78E053002A4ED5C9008781BF /* LongitudeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */; };
 		78E053042A4ED5C9008781BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053032A4ED5C9008781BF /* ContentView.swift */; };
 		78E053062A4ED5CA008781BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E053052A4ED5CA008781BF /* Assets.xcassets */; };
@@ -23,7 +26,7 @@
 		78E053382A4EDF85008781BF /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053372A4EDF85008781BF /* Journey.swift */; };
 		78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053392A4EDF8A008781BF /* Trip.swift */; };
 		78E0533C2A4EF76A008781BF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533B2A4EF76A008781BF /* Activity.swift */; };
-		78E053402A4F0371008781BF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533F2A4F0371008781BF /* SampleData.swift */; };
+		78E053402A4F0371008781BF /* SamplePersistanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533F2A4F0371008781BF /* SamplePersistanceStore.swift */; };
 		78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053432A4F16C0008781BF /* Trip-Preview.swift */; };
 		78E053462A4F1B23008781BF /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053452A4F1B23008781BF /* PreviewContainer.swift */; };
 		78E053482A4F292F008781BF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053472A4F292F008781BF /* TripView.swift */; };
@@ -55,6 +58,9 @@
 /* Begin PBXFileReference section */
 		787940DB2A52B113006D9CB5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		787940DE2A52B6B2006D9CB5 /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
+		78D497932A52E9B5007A489C /* Placemark-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placemark-Preview.swift"; sourceTree = "<group>"; };
+		78D497952A52EA7A007A489C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		78D497982A52F199007A489C /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
 		78E052FC2A4ED5C9008781BF /* Longitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Longitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongitudeApp.swift; sourceTree = "<group>"; };
 		78E053032A4ED5C9008781BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,7 +80,7 @@
 		78E053372A4EDF85008781BF /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		78E053392A4EDF8A008781BF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		78E0533B2A4EF76A008781BF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		78E0533F2A4F0371008781BF /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		78E0533F2A4F0371008781BF /* SamplePersistanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePersistanceStore.swift; sourceTree = "<group>"; };
 		78E053432A4F16C0008781BF /* Trip-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip-Preview.swift"; sourceTree = "<group>"; };
 		78E053452A4F1B23008781BF /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		78E053472A4F292F008781BF /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
@@ -129,6 +135,15 @@
 			path = Visit;
 			sourceTree = "<group>";
 		};
+		78D497972A52F18A007A489C /* Placemark */ = {
+			isa = PBXGroup;
+			children = (
+				78E053332A4EDF79008781BF /* Placemark.swift */,
+				78D497982A52F199007A489C /* PlacemarkView.swift */,
+			);
+			path = Placemark;
+			sourceTree = "<group>";
+		};
 		78E052F32A4ED5C9008781BF = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +171,7 @@
 				78E053322A4EDDF1008781BF /* Extenions */,
 				78E0532F2A4EDD8E008781BF /* Models */,
 				78E053032A4ED5C9008781BF /* ContentView.swift */,
+				78D497972A52F18A007A489C /* Placemark */,
 				787940E02A52B6C2006D9CB5 /* Visit */,
 				787940DD2A52B168006D9CB5 /* Step */,
 				78E0534F2A4F6617008781BF /* Trip */,
@@ -171,11 +187,13 @@
 			isa = PBXGroup;
 			children = (
 				78E053092A4ED5CA008781BF /* Preview Assets.xcassets */,
-				78E0533F2A4F0371008781BF /* SampleData.swift */,
+				78E0533F2A4F0371008781BF /* SamplePersistanceStore.swift */,
+				78D497952A52EA7A007A489C /* SampleData.swift */,
 				78E053452A4F1B23008781BF /* PreviewContainer.swift */,
 				78E053432A4F16C0008781BF /* Trip-Preview.swift */,
 				78E053522A4F6990008781BF /* Visit-Preview.swift */,
 				78E053542A4F6AFD008781BF /* Step-Preview.swift */,
+				78D497932A52E9B5007A489C /* Placemark-Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -200,7 +218,6 @@
 		78E0532F2A4EDD8E008781BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78E053332A4EDF79008781BF /* Placemark.swift */,
 				78E053372A4EDF85008781BF /* Journey.swift */,
 				78E0533B2A4EF76A008781BF /* Activity.swift */,
 			);
@@ -358,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D497962A52EA7A007A489C /* SampleData.swift in Sources */,
 				787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */,
 				78E053532A4F6990008781BF /* Visit-Preview.swift in Sources */,
 				78E0533C2A4EF76A008781BF /* Activity.swift in Sources */,
@@ -365,7 +383,7 @@
 				78E0532E2A4EDBAF008781BF /* Step.swift in Sources */,
 				78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */,
 				78E053482A4F292F008781BF /* TripView.swift in Sources */,
-				78E053402A4F0371008781BF /* SampleData.swift in Sources */,
+				78E053402A4F0371008781BF /* SamplePersistanceStore.swift in Sources */,
 				78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */,
 				787940DC2A52B113006D9CB5 /* StepView.swift in Sources */,
 				78E053462A4F1B23008781BF /* PreviewContainer.swift in Sources */,
@@ -374,9 +392,11 @@
 				78E053512A4F6646008781BF /* TripDetailView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
+				78D497992A52F199007A489C /* PlacemarkView.swift in Sources */,
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
 				78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */,
 				78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */,
+				78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */,
 				78E053362A4EDF7F008781BF /* Visit.swift in Sources */,
 				78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */,
 			);

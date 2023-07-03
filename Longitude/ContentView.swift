@@ -25,6 +25,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Visits", systemImage: "house")
                 }
+           PlacemarkView()
+                .tabItem {
+                    Label("Visits", systemImage: "house")
+                }
         }
     }
 }

@@ -24,6 +24,7 @@ struct StepView: View {
                     }
                 }
             }
+            .navigationTitle("Steps")
         }
     }
 }
@@ -33,7 +34,6 @@ struct StepView_Previews: PreviewProvider {
         NavigationStack {
             StepView()
                 .modelContainer(PreviewContainer.preview)
-                .navigationTitle("Steps")
         }
     }
 }
