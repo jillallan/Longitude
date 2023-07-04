@@ -15,20 +15,21 @@ struct TripDetailView: View {
     @State private var position: MapCameraPosition = .automatic
     
     var body: some View {
-        Map(position: $position) {
-            // TODO: Add annotations for visits and steps
-        }
-        .safeAreaInset(edge: .bottom) {
-            ActivityView(activities: activities)
-            // TODO: Add dynamic heigh
-            // TODO: constraint eaach entry to container
-                .frame(height: 50)
-        }
+        GeometryReader { geometry in
+            Map(position: $position) {
+                // TODO: Add annotations for visits and steps
+            }
+            .safeAreaInset(edge: .bottom) {
+                ActivityView(activities: activities)
+                // TODO: Add dynamic heigh
+                    .frame(height: geometry.size.width / 1.5)
+            }
 
-        // TODO: Add scroll view for visits and jorneys.  Click on a journey to get steps for the journey and edit them
-        
-        // TODO: Enable renaming trip
-            .navigationTitle(title)
+            // TODO: Add scroll view for visits and jorneys.  Click on a journey to get steps for the journey and edit them
+            
+            // TODO: Enable renaming trip
+                .navigationTitle(title)
+        }
     }
 }
 

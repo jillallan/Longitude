@@ -16,10 +16,7 @@ struct TripCard: View {
         Image(.mongolia)
             .resizable()
             .scaledToFill()
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            .clipped(antialiased: true)
-            .aspectRatio(1.0, contentMode: .fit)
-            .cornerRadius(25.0)
+            .cardStyle(aspectRatio: 1.0, cornerRadius: 25.0)
             .overlay {
                 TripCardOverlay(title: title, startDate: startDate, endDate: endDate)
             }

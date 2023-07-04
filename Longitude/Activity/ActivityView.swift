@@ -15,11 +15,8 @@ struct ActivityView: View {
             LazyHStack {
                 ForEach(activities) { activity in
                     if let visit = activity.visit {
-                        VStack {
-                            // TODO: Adjust date based on length of visit
-                            Text(visit.arrivalDate.formatted(date: .abbreviated, time: .shortened))
-                            Text(visit.step?.placemark?.name ?? "New visit")
-                        }
+                        VisitCard(visit: visit)
+                            .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
                     } else if let journey = activity.journey {
                         VStack {
                             // TODO: Adjust date based on length of visit
@@ -29,7 +26,11 @@ struct ActivityView: View {
                     }
                 }
             }
+            .scrollTargetLayout()
         }
+        .safeAreaPadding(.horizontal, 20)
+        .scrollTargetBehavior(.viewAligned)
+        .scrollIndicators(.hidden)
     }
 }
 

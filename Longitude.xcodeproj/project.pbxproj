@@ -14,6 +14,8 @@
 		78D497992A52F199007A489C /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497982A52F199007A489C /* PlacemarkView.swift */; };
 		78D4979C2A53F8D9007A489C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4979B2A53F8D9007A489C /* ActivityView.swift */; };
 		78D4979E2A53FA3C007A489C /* Activity-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4979D2A53FA3C007A489C /* Activity-Preview.swift */; };
+		78D497A02A5418A1007A489C /* View-CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */; };
+		78D497A22A5438A0007A489C /* VisitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497A12A5438A0007A489C /* VisitCard.swift */; };
 		78E053002A4ED5C9008781BF /* LongitudeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */; };
 		78E053042A4ED5C9008781BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053032A4ED5C9008781BF /* ContentView.swift */; };
 		78E053062A4ED5CA008781BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E053052A4ED5CA008781BF /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		78D497982A52F199007A489C /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
 		78D4979B2A53F8D9007A489C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		78D4979D2A53FA3C007A489C /* Activity-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity-Preview.swift"; sourceTree = "<group>"; };
+		78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-CustomModifiers.swift"; sourceTree = "<group>"; };
+		78D497A12A5438A0007A489C /* VisitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitCard.swift; sourceTree = "<group>"; };
 		78E052FC2A4ED5C9008781BF /* Longitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Longitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongitudeApp.swift; sourceTree = "<group>"; };
 		78E053032A4ED5C9008781BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				78E0533B2A4EF76A008781BF /* Activity.swift */,
 				78D4979B2A53F8D9007A489C /* ActivityView.swift */,
+				78D497A12A5438A0007A489C /* VisitCard.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				78E053302A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift */,
+				78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */,
 			);
 			path = Extenions;
 			sourceTree = "<group>";
@@ -404,9 +410,11 @@
 				78E053002A4ED5C9008781BF /* LongitudeApp.swift in Sources */,
 				78D4979E2A53FA3C007A489C /* Activity-Preview.swift in Sources */,
 				78E0534C2A4F2D59008781BF /* TripCardOverlay.swift in Sources */,
+				78D497A22A5438A0007A489C /* VisitCard.swift in Sources */,
 				78E053512A4F6646008781BF /* TripDetailView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
+				78D497A02A5418A1007A489C /* View-CustomModifiers.swift in Sources */,
 				78D497992A52F199007A489C /* PlacemarkView.swift in Sources */,
 				78D4979C2A53F8D9007A489C /* ActivityView.swift in Sources */,
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
