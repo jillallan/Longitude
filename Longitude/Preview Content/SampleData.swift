@@ -24,4 +24,12 @@ struct SampleData {
         (2016, 7, 28, 11, 21, 51.52576179854365, -0.1350089737873496, "Euston Square, London, England"),
         (2016, 7, 28, 11, 24, 51.530869876600214, -0.12313681611591933, "Kings Cross, St Pancras, London, England"),
     ]
+    
+    static let visitDetails = [
+        (2016, 7, 28, 8, 0, 0, 7),  // St Johns Lane
+        (2016, 7, 28, 8, 20, 0, 10),  // Bedminster Station
+        (2016, 7, 28, 8, 40, 0, 55),  // Temple Meads
+        (2016, 7, 28, 11, 7, 0, 5),  // Paddington
+        (2016, 7, 28, 11, 24, 1, 0),  // St Pancras
+    ]
 }

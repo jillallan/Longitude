@@ -28,6 +28,10 @@ final class Step {
         timestamp.formatted(date: .abbreviated, time: .shortened)
     }
     
+    var placemarkName: String {
+        placemark?.name ?? "Unknown Place"
+    }
+    
     // MARK: - Initialization
     init(timestamp: Date, coordinate: CLLocationCoordinate2D, altitude: Double, horizontalAccuracy: Double, verticalAccuracy: Double, day: Date) {
         self.timestamp = timestamp

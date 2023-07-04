@@ -21,10 +21,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Steps", systemImage: "figure.walk")
                 }
-            VisitView()
-                .tabItem {
-                    Label("Visits", systemImage: "house")
-                }
+//            VisitView()
+//                .tabItem {
+//                    Label("Visits", systemImage: "house")
+//                }
            PlacemarkView()
                 .tabItem {
                     Label("Visits", systemImage: "house")

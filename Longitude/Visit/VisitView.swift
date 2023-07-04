@@ -9,19 +9,18 @@ import SwiftData
 import SwiftUI
 
 struct VisitView: View {
-    @Query(sort: \.arrivalDate) private var visits: [Visit]
+//    @Query(sort: \.arrivalDate) private var visits: [Visit]
+    let visits: [Visit]
+    
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(visits) { visit in
-                    VStack {
-                        HStack {
-                            Text(visit.arrivalDate.formatted(date: .abbreviated, time: .omitted))
-                            Text(visit.departureDate.formatted(date: .abbreviated, time: .omitted))
-                        }
-                        HStack {
-                            Text(visit.step?.coordinate.latitude ?? 0.0, format: .number)
-                            Text(visit.step?.coordinate.longitude ?? 0.0, format: .number)
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(visits) { visit in
+                        VStack {
+                            // TODO: Adjust date based on length of visit
+                            Text(visit.arrivalDate.formatted(date: .abbreviated, time: .shortened))
+                            Text(visit.step?.placemark?.name ?? "New visit")
                         }
                     }
                 }
@@ -33,7 +32,7 @@ struct VisitView: View {
 struct VisitView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            VisitView()
+            VisitView(visits: Visit.previews)
                 .modelContainer(PreviewContainer.preview)
                 .navigationTitle("Visits")
         }

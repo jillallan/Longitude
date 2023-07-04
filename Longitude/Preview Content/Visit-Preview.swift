@@ -33,18 +33,12 @@ extension Visit {
         var components = DateComponents()
         let calendar = Calendar.current
         
-        let visitDetails = [
-            (2016, 7, 28, 8, 0, 0, 7),  // St Johns Lane
-            (2016, 7, 28, 8, 20, 0, 10),  // Bedminster Station
-            (2016, 7, 28, 8, 40, 0, 55),  // Temple Meads
-            (2016, 7, 28, 11, 7, 0, 5),  // Paddington
-            (2016, 7, 28, 11, 24, 1, 0),  // St Pancras
-        ]
-        
-        let _ = visitDetails.map { (year, month, day, hour, minute, hours, minutes) in
+        let _ = SampleData.visitDetails.map { (year, month, day, hour, minute, hours, minutes) in
             components.year = year
             components.month = month
             components.day = day
+            components.hour = hour
+            components.minute = minute
             
             let arrivalDate = calendar.date(from: components) ?? Date.now
             let tempDate = calendar.date(byAdding: .hour, value: hours, to: arrivalDate) ?? Date.now
@@ -55,7 +49,7 @@ extension Visit {
 
             // fetch step to add to visit based on the date
             let fetchDescriptor = FetchDescriptor<Step>(predicate: #Predicate { step in
-                step.timestamp >= arrivalDate && step.timestamp <= departureDate
+                step.timestamp >= arrivalDate && step.timestamp < departureDate
             })
             
             do {

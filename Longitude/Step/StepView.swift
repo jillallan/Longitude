@@ -15,12 +15,9 @@ struct StepView: View {
         NavigationStack {
             List {
                 ForEach(steps) { step in
-                    VStack {
-                        Text(step.timestamp.formatted(date: .abbreviated, time: .omitted))
-                        HStack {
-                            Text(step.coordinate.latitude, format: .number)
-                            Text(step.coordinate.longitude, format: .number)
-                        }
+                    HStack {
+                        Text(step.timestamp.formatted(date: .abbreviated, time: .shortened))
+                        Text(step.placemarkName)
                     }
                 }
             }
