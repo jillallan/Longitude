@@ -25,7 +25,21 @@ final class LongitudeUITests: XCTestCase {
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        
+//        let app = XCUIApplication()
+//        app.navigationBars["Trips"].buttons["Add Trip"].tap()
+        
+
+        
+                
         app.launch()
+        
+//        let app = XCUIApplication()
+        app.tabBars["Tab Bar"].buttons["Trips"].tap()
+        app.navigationBars["Trips"].buttons["Add Trip"].tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.textFields["Trip Title"]/*[[".cells.textFields[\"Trip Title\"]",".textFields[\"Trip Title\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.staticTexts["Start Date"]/*[[".cells.staticTexts[\"Start Date\"]",".staticTexts[\"Start Date\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+                
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

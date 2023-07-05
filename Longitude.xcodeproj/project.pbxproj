@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		787940DC2A52B113006D9CB5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DB2A52B113006D9CB5 /* StepView.swift */; };
 		787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DE2A52B6B2006D9CB5 /* VisitView.swift */; };
+		787B508D2A55524D0076326F /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B508C2A55524D0076326F /* UITestHelper.swift */; };
+		78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDB82A5554800047F751 /* Date-Extension.swift */; };
+		78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */; };
 		78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497932A52E9B5007A489C /* Placemark-Preview.swift */; };
 		78D497962A52EA7A007A489C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497952A52EA7A007A489C /* SampleData.swift */; };
 		78D497992A52F199007A489C /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497982A52F199007A489C /* PlacemarkView.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		787940DB2A52B113006D9CB5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		787940DE2A52B6B2006D9CB5 /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
+		787B508C2A55524D0076326F /* UITestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
+		78B8BDB82A5554800047F751 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
+		78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		78D497932A52E9B5007A489C /* Placemark-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placemark-Preview.swift"; sourceTree = "<group>"; };
 		78D497952A52EA7A007A489C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		78D497982A52F199007A489C /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				78E053142A4ED5CA008781BF /* LongitudeTests.swift */,
+				78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */,
 			);
 			path = LongitudeTests;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 		78E0531D2A4ED5CA008781BF /* LongitudeUITests */ = {
 			isa = PBXGroup;
 			children = (
+				787B508C2A55524D0076326F /* UITestHelper.swift */,
 				78E0531E2A4ED5CA008781BF /* LongitudeUITests.swift */,
 				78E053202A4ED5CA008781BF /* LongitudeUITestsLaunchTests.swift */,
 			);
@@ -248,6 +256,7 @@
 			children = (
 				78E053302A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift */,
 				78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */,
+				78B8BDB82A5554800047F751 /* Date-Extension.swift */,
 			);
 			path = Extenions;
 			sourceTree = "<group>";
@@ -414,6 +423,7 @@
 				78E053512A4F6646008781BF /* TripDetailView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
+				78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */,
 				78D497A02A5418A1007A489C /* View-CustomModifiers.swift in Sources */,
 				78D497992A52F199007A489C /* PlacemarkView.swift in Sources */,
 				78D4979C2A53F8D9007A489C /* ActivityView.swift in Sources */,
@@ -431,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E053152A4ED5CA008781BF /* LongitudeTests.swift in Sources */,
+				78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787B508D2A55524D0076326F /* UITestHelper.swift in Sources */,
 				78E053212A4ED5CA008781BF /* LongitudeUITestsLaunchTests.swift in Sources */,
 				78E0531F2A4ED5CA008781BF /* LongitudeUITests.swift in Sources */,
 			);
