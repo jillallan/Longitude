@@ -18,7 +18,7 @@ struct LongitudeApp: App {
         .modelContainer(for: [Trip.self], inMemory: true) { result in
             switch result {
             case .success(let container):
-                SampleData.createData(modelContext: container.mainContext)
+                SamplePersistanceStore.createData(modelContext: container.mainContext)
             case .failure(let error):
                 print(error.localizedDescription)
             }

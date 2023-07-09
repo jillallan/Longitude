@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787940DC2A52B113006D9CB5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DB2A52B113006D9CB5 /* StepView.swift */; };
+		787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DE2A52B6B2006D9CB5 /* VisitView.swift */; };
+		78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDB82A5554800047F751 /* Date-Extension.swift */; };
+		78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */; };
+		78B8BDBD2A5740300047F751 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */; };
+		78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497932A52E9B5007A489C /* Placemark-Preview.swift */; };
+		78D497962A52EA7A007A489C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497952A52EA7A007A489C /* SampleData.swift */; };
+		78D497992A52F199007A489C /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497982A52F199007A489C /* PlacemarkView.swift */; };
+		78D4979C2A53F8D9007A489C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4979B2A53F8D9007A489C /* ActivityView.swift */; };
+		78D4979E2A53FA3C007A489C /* Activity-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4979D2A53FA3C007A489C /* Activity-Preview.swift */; };
+		78D497A02A5418A1007A489C /* View-CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */; };
+		78D497A22A5438A0007A489C /* VisitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497A12A5438A0007A489C /* VisitCard.swift */; };
 		78E053002A4ED5C9008781BF /* LongitudeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */; };
 		78E053042A4ED5C9008781BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053032A4ED5C9008781BF /* ContentView.swift */; };
 		78E053062A4ED5CA008781BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E053052A4ED5CA008781BF /* Assets.xcassets */; };
@@ -21,17 +33,26 @@
 		78E053382A4EDF85008781BF /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053372A4EDF85008781BF /* Journey.swift */; };
 		78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053392A4EDF8A008781BF /* Trip.swift */; };
 		78E0533C2A4EF76A008781BF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533B2A4EF76A008781BF /* Activity.swift */; };
-		78E053402A4F0371008781BF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533F2A4F0371008781BF /* SampleData.swift */; };
+		78E053402A4F0371008781BF /* SamplePersistanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0533F2A4F0371008781BF /* SamplePersistanceStore.swift */; };
 		78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053432A4F16C0008781BF /* Trip-Preview.swift */; };
 		78E053462A4F1B23008781BF /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053452A4F1B23008781BF /* PreviewContainer.swift */; };
-		78E053482A4F292F008781BF /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053472A4F292F008781BF /* TripsView.swift */; };
+		78E053482A4F292F008781BF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053472A4F292F008781BF /* TripView.swift */; };
 		78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053492A4F2BC4008781BF /* TripCard.swift */; };
 		78E0534C2A4F2D59008781BF /* TripCardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */; };
 		78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0534D2A4F5F23008781BF /* AddTripView.swift */; };
-		78E053512A4F6646008781BF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053502A4F6646008781BF /* TripView.swift */; };
+		78E053512A4F6646008781BF /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053502A4F6646008781BF /* TripDetailView.swift */; };
+		78E053532A4F6990008781BF /* Visit-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053522A4F6990008781BF /* Visit-Preview.swift */; };
+		78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E053542A4F6AFD008781BF /* Step-Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		789AABC22A5AB8B90065763B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E052F42A4ED5C9008781BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78E052FB2A4ED5C9008781BF;
+			remoteInfo = Longitude;
+		};
 		78E053112A4ED5CA008781BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78E052F42A4ED5C9008781BF /* Project object */;
@@ -49,6 +70,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		787940DB2A52B113006D9CB5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		787940DE2A52B6B2006D9CB5 /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
+		789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongitudeUITests2.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B8BDB82A5554800047F751 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
+		78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
+		78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
+		78D497932A52E9B5007A489C /* Placemark-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placemark-Preview.swift"; sourceTree = "<group>"; };
+		78D497952A52EA7A007A489C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		78D497982A52F199007A489C /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
+		78D4979B2A53F8D9007A489C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		78D4979D2A53FA3C007A489C /* Activity-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity-Preview.swift"; sourceTree = "<group>"; };
+		78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-CustomModifiers.swift"; sourceTree = "<group>"; };
+		78D497A12A5438A0007A489C /* VisitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitCard.swift; sourceTree = "<group>"; };
 		78E052FC2A4ED5C9008781BF /* Longitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Longitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongitudeApp.swift; sourceTree = "<group>"; };
 		78E053032A4ED5C9008781BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,17 +102,26 @@
 		78E053372A4EDF85008781BF /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		78E053392A4EDF8A008781BF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		78E0533B2A4EF76A008781BF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		78E0533F2A4F0371008781BF /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		78E0533F2A4F0371008781BF /* SamplePersistanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePersistanceStore.swift; sourceTree = "<group>"; };
 		78E053432A4F16C0008781BF /* Trip-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip-Preview.swift"; sourceTree = "<group>"; };
 		78E053452A4F1B23008781BF /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
-		78E053472A4F292F008781BF /* TripsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		78E053472A4F292F008781BF /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		78E053492A4F2BC4008781BF /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
 		78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardOverlay.swift; sourceTree = "<group>"; };
 		78E0534D2A4F5F23008781BF /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
-		78E053502A4F6646008781BF /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		78E053502A4F6646008781BF /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		78E053522A4F6990008781BF /* Visit-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Visit-Preview.swift"; sourceTree = "<group>"; };
+		78E053542A4F6AFD008781BF /* Step-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step-Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		789AABB92A5AB8B90065763B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E052F92A4ED5C9008781BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,6 +146,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		787940DD2A52B168006D9CB5 /* Step */ = {
+			isa = PBXGroup;
+			children = (
+				78E0532D2A4EDBAF008781BF /* Step.swift */,
+				787940DB2A52B113006D9CB5 /* StepView.swift */,
+			);
+			path = Step;
+			sourceTree = "<group>";
+		};
+		787940E02A52B6C2006D9CB5 /* Visit */ = {
+			isa = PBXGroup;
+			children = (
+				78E053352A4EDF7F008781BF /* Visit.swift */,
+				787940DE2A52B6B2006D9CB5 /* VisitView.swift */,
+			);
+			path = Visit;
+			sourceTree = "<group>";
+		};
+		78D497972A52F18A007A489C /* Placemark */ = {
+			isa = PBXGroup;
+			children = (
+				78E053332A4EDF79008781BF /* Placemark.swift */,
+				78D497982A52F199007A489C /* PlacemarkView.swift */,
+			);
+			path = Placemark;
+			sourceTree = "<group>";
+		};
+		78D4979A2A53F8B9007A489C /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				78E0533B2A4EF76A008781BF /* Activity.swift */,
+				78D4979B2A53F8D9007A489C /* ActivityView.swift */,
+				78D497A12A5438A0007A489C /* VisitCard.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		78E052F32A4ED5C9008781BF = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +199,7 @@
 				78E052FC2A4ED5C9008781BF /* Longitude.app */,
 				78E053102A4ED5CA008781BF /* LongitudeTests.xctest */,
 				78E0531A2A4ED5CA008781BF /* LongitudeUITests.xctest */,
+				789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +208,13 @@
 			isa = PBXGroup;
 			children = (
 				78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */,
+				78E053032A4ED5C9008781BF /* ContentView.swift */,
 				78E053322A4EDDF1008781BF /* Extenions */,
 				78E0532F2A4EDD8E008781BF /* Models */,
-				78E053032A4ED5C9008781BF /* ContentView.swift */,
+				78D497972A52F18A007A489C /* Placemark */,
+				78D4979A2A53F8B9007A489C /* Activity */,
+				787940E02A52B6C2006D9CB5 /* Visit */,
+				787940DD2A52B168006D9CB5 /* Step */,
 				78E0534F2A4F6617008781BF /* Trip */,
 				78E053052A4ED5CA008781BF /* Assets.xcassets */,
 				78E053072A4ED5CA008781BF /* Longitude.entitlements */,
@@ -143,9 +228,14 @@
 			isa = PBXGroup;
 			children = (
 				78E053092A4ED5CA008781BF /* Preview Assets.xcassets */,
-				78E0533F2A4F0371008781BF /* SampleData.swift */,
+				78E0533F2A4F0371008781BF /* SamplePersistanceStore.swift */,
+				78D497952A52EA7A007A489C /* SampleData.swift */,
 				78E053452A4F1B23008781BF /* PreviewContainer.swift */,
 				78E053432A4F16C0008781BF /* Trip-Preview.swift */,
+				78D4979D2A53FA3C007A489C /* Activity-Preview.swift */,
+				78E053522A4F6990008781BF /* Visit-Preview.swift */,
+				78E053542A4F6AFD008781BF /* Step-Preview.swift */,
+				78D497932A52E9B5007A489C /* Placemark-Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -154,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				78E053142A4ED5CA008781BF /* LongitudeTests.swift */,
+				78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */,
 			);
 			path = LongitudeTests;
 			sourceTree = "<group>";
@@ -161,6 +252,7 @@
 		78E0531D2A4ED5CA008781BF /* LongitudeUITests */ = {
 			isa = PBXGroup;
 			children = (
+				78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */,
 				78E0531E2A4ED5CA008781BF /* LongitudeUITests.swift */,
 				78E053202A4ED5CA008781BF /* LongitudeUITestsLaunchTests.swift */,
 			);
@@ -170,11 +262,7 @@
 		78E0532F2A4EDD8E008781BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78E0532D2A4EDBAF008781BF /* Step.swift */,
-				78E053332A4EDF79008781BF /* Placemark.swift */,
-				78E053352A4EDF7F008781BF /* Visit.swift */,
 				78E053372A4EDF85008781BF /* Journey.swift */,
-				78E0533B2A4EF76A008781BF /* Activity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				78E053302A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift */,
+				78D4979F2A5418A1007A489C /* View-CustomModifiers.swift */,
+				78B8BDB82A5554800047F751 /* Date-Extension.swift */,
 			);
 			path = Extenions;
 			sourceTree = "<group>";
@@ -191,11 +281,11 @@
 			isa = PBXGroup;
 			children = (
 				78E053392A4EDF8A008781BF /* Trip.swift */,
-				78E053472A4F292F008781BF /* TripsView.swift */,
+				78E053472A4F292F008781BF /* TripView.swift */,
+				78E053502A4F6646008781BF /* TripDetailView.swift */,
 				78E053492A4F2BC4008781BF /* TripCard.swift */,
 				78E0534B2A4F2D59008781BF /* TripCardOverlay.swift */,
 				78E0534D2A4F5F23008781BF /* AddTripView.swift */,
-				78E053502A4F6646008781BF /* TripView.swift */,
 			);
 			path = Trip;
 			sourceTree = "<group>";
@@ -203,6 +293,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		789AABBB2A5AB8B90065763B /* LongitudeUITests2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789AABC42A5AB8B90065763B /* Build configuration list for PBXNativeTarget "LongitudeUITests2" */;
+			buildPhases = (
+				789AABB82A5AB8B90065763B /* Sources */,
+				789AABB92A5AB8B90065763B /* Frameworks */,
+				789AABBA2A5AB8B90065763B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				789AABC32A5AB8B90065763B /* PBXTargetDependency */,
+			);
+			name = LongitudeUITests2;
+			productName = LongitudeUITests2;
+			productReference = 789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		78E052FB2A4ED5C9008781BF /* Longitude */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78E053242A4ED5CA008781BF /* Build configuration list for PBXNativeTarget "Longitude" */;
@@ -266,6 +374,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					789AABBB2A5AB8B90065763B = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 78E052FB2A4ED5C9008781BF;
+					};
 					78E052FB2A4ED5C9008781BF = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -295,11 +407,19 @@
 				78E052FB2A4ED5C9008781BF /* Longitude */,
 				78E0530F2A4ED5CA008781BF /* LongitudeTests */,
 				78E053192A4ED5CA008781BF /* LongitudeUITests */,
+				789AABBB2A5AB8B90065763B /* LongitudeUITests2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		789AABBA2A5AB8B90065763B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E052FA2A4ED5C9008781BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,25 +446,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		789AABB82A5AB8B90065763B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E052F82A4ED5C9008781BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D497962A52EA7A007A489C /* SampleData.swift in Sources */,
+				787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */,
+				78E053532A4F6990008781BF /* Visit-Preview.swift in Sources */,
 				78E0533C2A4EF76A008781BF /* Activity.swift in Sources */,
 				78E053312A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift in Sources */,
 				78E0532E2A4EDBAF008781BF /* Step.swift in Sources */,
 				78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */,
-				78E053482A4F292F008781BF /* TripsView.swift in Sources */,
-				78E053402A4F0371008781BF /* SampleData.swift in Sources */,
+				78E053482A4F292F008781BF /* TripView.swift in Sources */,
+				78E053402A4F0371008781BF /* SamplePersistanceStore.swift in Sources */,
 				78E0533A2A4EDF8A008781BF /* Trip.swift in Sources */,
+				787940DC2A52B113006D9CB5 /* StepView.swift in Sources */,
 				78E053462A4F1B23008781BF /* PreviewContainer.swift in Sources */,
 				78E053002A4ED5C9008781BF /* LongitudeApp.swift in Sources */,
+				78D4979E2A53FA3C007A489C /* Activity-Preview.swift in Sources */,
 				78E0534C2A4F2D59008781BF /* TripCardOverlay.swift in Sources */,
-				78E053512A4F6646008781BF /* TripView.swift in Sources */,
+				78D497A22A5438A0007A489C /* VisitCard.swift in Sources */,
+				78E053512A4F6646008781BF /* TripDetailView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
+				78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */,
+				78D497A02A5418A1007A489C /* View-CustomModifiers.swift in Sources */,
+				78D497992A52F199007A489C /* PlacemarkView.swift in Sources */,
+				78D4979C2A53F8D9007A489C /* ActivityView.swift in Sources */,
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
 				78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */,
+				78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */,
+				78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */,
 				78E053362A4EDF7F008781BF /* Visit.swift in Sources */,
 				78E0534E2A4F5F23008781BF /* AddTripView.swift in Sources */,
 			);
@@ -355,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E053152A4ED5CA008781BF /* LongitudeTests.swift in Sources */,
+				78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B8BDBD2A5740300047F751 /* BaseUITestCase.swift in Sources */,
 				78E053212A4ED5CA008781BF /* LongitudeUITestsLaunchTests.swift in Sources */,
 				78E0531F2A4ED5CA008781BF /* LongitudeUITests.swift in Sources */,
 			);
@@ -370,6 +511,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		789AABC32A5AB8B90065763B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78E052FB2A4ED5C9008781BF /* Longitude */;
+			targetProxy = 789AABC22A5AB8B90065763B /* PBXContainerItemProxy */;
+		};
 		78E053122A4ED5CA008781BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 78E052FB2A4ED5C9008781BF /* Longitude */;
@@ -383,6 +529,45 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		789AABC52A5AB8B90065763B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Longitude;
+			};
+			name = Debug;
+		};
+		789AABC62A5AB8B90065763B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Longitude;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		78E053222A4ED5CA008781BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,7 +709,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Longitude;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,7 +748,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Longitude;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -585,7 +770,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,7 +793,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -630,7 +815,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -652,7 +837,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -668,6 +853,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		789AABC42A5AB8B90065763B /* Build configuration list for PBXNativeTarget "LongitudeUITests2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789AABC52A5AB8B90065763B /* Debug */,
+				789AABC62A5AB8B90065763B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		78E052F72A4ED5C9008781BF /* Build configuration list for PBXProject "Longitude" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

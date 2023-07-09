@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 
 extension Trip {
+    // TODO: Update to match step preview
     
     @MainActor
     static var preview: Trip = {
@@ -27,32 +28,26 @@ extension Trip {
         
     }()
     
-    static func createSampleData(modelContext: ModelContext) -> [Trip] {
+    static func createSampleData(modelContext: ModelContext) {
         var components = DateComponents()
         let calendar = Calendar.current
-        components.year = 2016
-        components.month = 7
-        components.day = 27
         
-        let trip1startDate = calendar.date(from: components) ?? Date.now
-        let trip1endDate = calendar.date(byAdding: .day, value: 4, to: trip1startDate) ?? Date.now
-        
-        let trip2startDate = calendar.date(byAdding: .day, value: 4, to: trip1startDate) ?? Date.now
-        let trip2endDate = calendar.date(byAdding: .day, value: 20, to: trip1startDate) ?? Date.now
-        
-        let trip3startDate = calendar.date(byAdding: .day, value: 20, to: trip1startDate) ?? Date.now
-        let trip3endDate = calendar.date(byAdding: .day, value: 34, to: trip1startDate) ?? Date.now
-        
-        let trips = [
-            Trip(startDate: trip1startDate, endDate: trip1endDate, title: "Bedminster to Moscow"),
-            Trip(startDate: trip2startDate, endDate: trip2endDate, title: "Russia"),
-            Trip(startDate: trip3startDate, endDate: trip3endDate, title: "Mongolia")
+        let tripDetails = [
+            (2016, 7, 28, 4, "Bedminster to Moscow"),
+            (2016, 8, 1, 14, "Russia"),
+            (2016, 8, 15, 14, "Mongolia")
         ]
         
-        _ = trips.map { trip in
-            modelContext.insert(trip)
+        let _ = tripDetails.map { (year, month, day, days, title) in
+            components.year = year
+            components.month = month
+            components.day = day
+            
+            let startDate = calendar.date(from: components) ?? Date.now
+            let endDate = calendar.date(byAdding: .day, value: days, to: startDate) ?? Date.now
+            
+            let step = Trip(startDate: startDate, endDate: endDate, title: title)
+            modelContext.insert(step)
         }
-        
-        return trips
     }
 }

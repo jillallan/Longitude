@@ -10,9 +10,12 @@ import SwiftUI
 struct AddTripView: View {
     @Environment(\.modelContext) private var modelContext
     
+//    let trip: Trip
+    
     @State private var title: String = ""
     @State private var startDate: Date = Date.now
     @State private var endDate: Date = Date.now
+    @Binding var navPath: NavigationPath
     
     @Environment(\.dismiss) private var dismiss
     
@@ -30,8 +33,8 @@ struct AddTripView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
-                        addTrip()
                         dismiss()
+                        addTrip()
                     }
                 }
                 ToolbarItem(placement: .topBarLeading) {
@@ -46,6 +49,7 @@ struct AddTripView: View {
     func addTrip() {
         let newTrip = Trip(startDate: startDate, endDate: endDate, title: title)
         modelContext.insert(newTrip)
+        navPath.append(newTrip)
     }
 }
 
@@ -56,6 +60,6 @@ struct AddTripView: View {
 //    }
 //}
 
-#Preview {
-    AddTripView()
-}
+//#Preview {
+//    AddTripView()
+//}

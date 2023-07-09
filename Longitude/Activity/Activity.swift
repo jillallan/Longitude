@@ -20,8 +20,8 @@ final class Activity {
     var journey: Journey?
     
     // MARK: - Initialization
-    init() {
-
+    init(timestamp: Date) {
+        self.timestamp = timestamp
     }
 }
 

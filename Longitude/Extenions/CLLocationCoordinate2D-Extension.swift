@@ -29,9 +29,9 @@ extension CLLocationCoordinate2D: Codable {
     }
 }
 
-// TODO: I can't remember what this is for - Uncomment once I know
-//extension CLLocationCoordinate2D: Equatable {
-//    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
-//        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
-//    }
-//}
+// Added equatable conformance so we can fetch steps based on their coordinates
+extension CLLocationCoordinate2D: Equatable {
+    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}
