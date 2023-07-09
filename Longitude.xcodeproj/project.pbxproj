@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		787940DC2A52B113006D9CB5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DB2A52B113006D9CB5 /* StepView.swift */; };
 		787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DE2A52B6B2006D9CB5 /* VisitView.swift */; };
-		787B508D2A55524D0076326F /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B508C2A55524D0076326F /* UITestHelper.swift */; };
 		78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDB82A5554800047F751 /* Date-Extension.swift */; };
 		78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */; };
+		78B8BDBD2A5740300047F751 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */; };
 		78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497932A52E9B5007A489C /* Placemark-Preview.swift */; };
 		78D497962A52EA7A007A489C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497952A52EA7A007A489C /* SampleData.swift */; };
 		78D497992A52F199007A489C /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497982A52F199007A489C /* PlacemarkView.swift */; };
@@ -46,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		789AABC22A5AB8B90065763B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E052F42A4ED5C9008781BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78E052FB2A4ED5C9008781BF;
+			remoteInfo = Longitude;
+		};
 		78E053112A4ED5CA008781BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78E052F42A4ED5C9008781BF /* Project object */;
@@ -65,9 +72,10 @@
 /* Begin PBXFileReference section */
 		787940DB2A52B113006D9CB5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		787940DE2A52B6B2006D9CB5 /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
-		787B508C2A55524D0076326F /* UITestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
+		789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongitudeUITests2.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B8BDB82A5554800047F751 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
+		78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
 		78D497932A52E9B5007A489C /* Placemark-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placemark-Preview.swift"; sourceTree = "<group>"; };
 		78D497952A52EA7A007A489C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		78D497982A52F199007A489C /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
@@ -107,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		789AABB92A5AB8B90065763B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E052F92A4ED5C9008781BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +199,7 @@
 				78E052FC2A4ED5C9008781BF /* Longitude.app */,
 				78E053102A4ED5CA008781BF /* LongitudeTests.xctest */,
 				78E0531A2A4ED5CA008781BF /* LongitudeUITests.xctest */,
+				789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,9 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */,
+				78E053032A4ED5C9008781BF /* ContentView.swift */,
 				78E053322A4EDDF1008781BF /* Extenions */,
 				78E0532F2A4EDD8E008781BF /* Models */,
-				78E053032A4ED5C9008781BF /* ContentView.swift */,
 				78D497972A52F18A007A489C /* Placemark */,
 				78D4979A2A53F8B9007A489C /* Activity */,
 				787940E02A52B6C2006D9CB5 /* Visit */,
@@ -236,7 +252,7 @@
 		78E0531D2A4ED5CA008781BF /* LongitudeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				787B508C2A55524D0076326F /* UITestHelper.swift */,
+				78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */,
 				78E0531E2A4ED5CA008781BF /* LongitudeUITests.swift */,
 				78E053202A4ED5CA008781BF /* LongitudeUITestsLaunchTests.swift */,
 			);
@@ -277,6 +293,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		789AABBB2A5AB8B90065763B /* LongitudeUITests2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789AABC42A5AB8B90065763B /* Build configuration list for PBXNativeTarget "LongitudeUITests2" */;
+			buildPhases = (
+				789AABB82A5AB8B90065763B /* Sources */,
+				789AABB92A5AB8B90065763B /* Frameworks */,
+				789AABBA2A5AB8B90065763B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				789AABC32A5AB8B90065763B /* PBXTargetDependency */,
+			);
+			name = LongitudeUITests2;
+			productName = LongitudeUITests2;
+			productReference = 789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		78E052FB2A4ED5C9008781BF /* Longitude */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78E053242A4ED5CA008781BF /* Build configuration list for PBXNativeTarget "Longitude" */;
@@ -340,6 +374,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					789AABBB2A5AB8B90065763B = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 78E052FB2A4ED5C9008781BF;
+					};
 					78E052FB2A4ED5C9008781BF = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -369,11 +407,19 @@
 				78E052FB2A4ED5C9008781BF /* Longitude */,
 				78E0530F2A4ED5CA008781BF /* LongitudeTests */,
 				78E053192A4ED5CA008781BF /* LongitudeUITests */,
+				789AABBB2A5AB8B90065763B /* LongitudeUITests2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		789AABBA2A5AB8B90065763B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E052FA2A4ED5C9008781BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +446,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		789AABB82A5AB8B90065763B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E052F82A4ED5C9008781BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				787B508D2A55524D0076326F /* UITestHelper.swift in Sources */,
+				78B8BDBD2A5740300047F751 /* BaseUITestCase.swift in Sources */,
 				78E053212A4ED5CA008781BF /* LongitudeUITestsLaunchTests.swift in Sources */,
 				78E0531F2A4ED5CA008781BF /* LongitudeUITests.swift in Sources */,
 			);
@@ -458,6 +511,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		789AABC32A5AB8B90065763B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78E052FB2A4ED5C9008781BF /* Longitude */;
+			targetProxy = 789AABC22A5AB8B90065763B /* PBXContainerItemProxy */;
+		};
 		78E053122A4ED5CA008781BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 78E052FB2A4ED5C9008781BF /* Longitude */;
@@ -471,6 +529,45 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		789AABC52A5AB8B90065763B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Longitude;
+			};
+			name = Debug;
+		};
+		789AABC62A5AB8B90065763B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Longitude;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		78E053222A4ED5CA008781BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -612,7 +709,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Longitude;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,7 +748,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Longitude;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -673,7 +770,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -696,7 +793,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -718,7 +815,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -740,7 +837,7 @@
 				DEVELOPMENT_TEAM = UJT6W9JA72;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.LongitudeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -756,6 +853,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		789AABC42A5AB8B90065763B /* Build configuration list for PBXNativeTarget "LongitudeUITests2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789AABC52A5AB8B90065763B /* Debug */,
+				789AABC62A5AB8B90065763B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		78E052F72A4ED5C9008781BF /* Build configuration list for PBXProject "Longitude" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

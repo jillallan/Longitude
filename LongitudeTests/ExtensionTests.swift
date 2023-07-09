@@ -5,6 +5,7 @@
 //  Created by Jill Allan on 05/07/2023.
 //
 
+import CoreLocation
 import XCTest
 @testable import Longitude
 
@@ -35,6 +36,20 @@ final class ExtensionTests: XCTestCase {
             "random date: \(randomDate) should be between \(startDate) and \(endDate)"
         )
     }
+//    
+//    func testEncodeCLLocationCoordinate2D_self_returnsData() throws {
+//        // if
+//        let jsonEncoder = JSONEncoder()
+//        let coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: 0.0)
+//        let coordinateJSON = "{"latitude": 51.0,"longitude": 0.0}"
+//        
+//        // when
+//        let encodedCoordinateData = try jsonEncoder.encode(coordinate)
+//        let encodedJSONString = String(data: encodedCoordinateData, encoding: .utf8) ?? ""
+//        
+//        // then
+//        XCTAssertEqual(encodedJSONString, coordinateJSON, "\(encodedJSONString) should be equal to \(coordinateJSON)")
+//    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

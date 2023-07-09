@@ -11,11 +11,14 @@ import SwiftUI
 struct TripView: View {
     
     // MARK: - Properties
+    @Environment(\.modelContext) private var modelContext
     @Query(sort: \.startDate) private var trips: [Trip]
     @State private var isAddTripViewPresented: Bool = false
+    @State private var navPath = NavigationPath()
+//    @State private var trip: Trip?
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navPath) {
             
             // MARK: - View
             ScrollView(.horizontal) {
@@ -46,16 +49,35 @@ struct TripView: View {
             }
             .toolbar {
                 Button {
+//                    addTrip()
                     isAddTripViewPresented.toggle()
                 } label: {
                     Label("Add Trip", systemImage: "plus")
                 }
             }
             .sheet(isPresented: $isAddTripViewPresented) {
-                AddTripView()
+                AddTripView(navPath: $navPath)
             }
+
+            
+//            .sheet(item: $trip) {
+//                moveToTripView()
+//            } content: { trip in
+//                AddTripView(trip: trip, navPath: $navPath)
+//            }
+
         }
     }
+//    func addTrip() {
+//        let newTrip = Trip(startDate: Date.now, endDate: Date.now, title: "New Trip")
+//        modelContext.insert(newTrip)
+//        trip = newTrip
+//    }
+    
+//    func moveToTripView() {
+//        // TODO: comment
+//        navPath.append(trip)
+//    }
 }
 
 struct TripView_Previews: PreviewProvider {

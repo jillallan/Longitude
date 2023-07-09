@@ -16,7 +16,7 @@ struct StepView: View {
             List {
                 ForEach(steps) { step in
                     HStack {
-                        Text(step.timestamp.formatted(date: .abbreviated, time: .shortened))
+                        Text(step.title)
                         Text(step.placemarkName)
                     }
                 }

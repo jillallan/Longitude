@@ -9,7 +9,7 @@ import Foundation
 
 struct SampleData {
     static let locations = [
-        (2016, 7, 28, 8, 6, 51.436027524806505, -2.597474502627349, "St Johns Lane, Bedminster, Bristol BS3 5BA, England"),
+        (2016, 7, 01, 8, 6, 51.436027524806505, -2.597474502627349, "St Johns Lane, Bedminster, Bristol BS3 5BA, England"),
         (2016, 7, 28, 8, 27, 51.436027524806505, -2.597474502627349, "Bedminster Station, Bristol, England"),
         (2016, 7, 28, 9, 30, 51.44966757913053, -2.5831726111207156, "Temple Meads Station, Bristol, England"),
         (2016, 7, 28, 9, 41, 51.37782769397433, -2.3569045449589785, "Bath Spa Station, Bath, England"),

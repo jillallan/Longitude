@@ -25,7 +25,9 @@ final class Step {
     
     // MARK: - Computed Properties
     var title: String {
-        timestamp.formatted(date: .abbreviated, time: .shortened)
+//        timestamp.formatted(date: .abbreviated, time: .shortened)
+        timestamp.formatted(Date.FormatStyle().month(.wide))
+//        timestamp.formatted()
     }
     
     var placemarkName: String {
