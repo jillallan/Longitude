@@ -49,7 +49,6 @@ struct TripView: View {
             }
             .toolbar {
                 Button {
-//                    addTrip()
                     isAddTripViewPresented.toggle()
                 } label: {
                     Label("Add Trip", systemImage: "plus")
@@ -58,26 +57,8 @@ struct TripView: View {
             .sheet(isPresented: $isAddTripViewPresented) {
                 AddTripView(navPath: $navPath)
             }
-
-            
-//            .sheet(item: $trip) {
-//                moveToTripView()
-//            } content: { trip in
-//                AddTripView(trip: trip, navPath: $navPath)
-//            }
-
         }
     }
-//    func addTrip() {
-//        let newTrip = Trip(startDate: Date.now, endDate: Date.now, title: "New Trip")
-//        modelContext.insert(newTrip)
-//        trip = newTrip
-//    }
-    
-//    func moveToTripView() {
-//        // TODO: comment
-//        navPath.append(trip)
-//    }
 }
 
 struct TripView_Previews: PreviewProvider {
