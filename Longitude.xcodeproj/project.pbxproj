@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		787940DC2A52B113006D9CB5 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DB2A52B113006D9CB5 /* StepView.swift */; };
 		787940DF2A52B6B2006D9CB5 /* VisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787940DE2A52B6B2006D9CB5 /* VisitView.swift */; };
-		789AABC82A5B118B0065763B /* DevelopmentPersistanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789AABC72A5B118B0065763B /* DevelopmentPersistanceStore.swift */; };
 		78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDB82A5554800047F751 /* Date-Extension.swift */; };
 		78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */; };
 		78B8BDBD2A5740300047F751 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */; };
@@ -74,7 +73,6 @@
 		787940DB2A52B113006D9CB5 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		787940DE2A52B6B2006D9CB5 /* VisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitView.swift; sourceTree = "<group>"; };
 		789AABBC2A5AB8B90065763B /* LongitudeUITests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongitudeUITests2.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		789AABC72A5B118B0065763B /* DevelopmentPersistanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentPersistanceStore.swift; sourceTree = "<group>"; };
 		78B8BDB82A5554800047F751 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				78E052FF2A4ED5C9008781BF /* LongitudeApp.swift */,
-				789AABC72A5B118B0065763B /* DevelopmentPersistanceStore.swift */,
 				78E053032A4ED5C9008781BF /* ContentView.swift */,
 				78E053322A4EDDF1008781BF /* Extenions */,
 				78E0532F2A4EDD8E008781BF /* Models */,
@@ -479,7 +476,6 @@
 				78E053512A4F6646008781BF /* TripDetailView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
-				789AABC82A5B118B0065763B /* DevelopmentPersistanceStore.swift in Sources */,
 				78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */,
 				78D497A02A5418A1007A489C /* View-CustomModifiers.swift in Sources */,
 				78D497992A52F199007A489C /* PlacemarkView.swift in Sources */,

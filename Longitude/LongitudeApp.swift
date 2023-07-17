@@ -18,7 +18,9 @@ struct LongitudeApp: App {
         .modelContainer(for: [Trip.self], inMemory: true) { result in
             switch result {
             case .success(let container):
-                SamplePersistanceStore.createData(modelContext: container.mainContext)
+                if ProcessInfo.processInfo.environment["create_sample_data"] == "true" {
+                    SamplePersistanceStore.createData(modelContext: container.mainContext)
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
