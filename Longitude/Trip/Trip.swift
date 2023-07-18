@@ -24,6 +24,22 @@ final class Trip {
         activities?.sorted() ?? []
     }
     
+    var steps: [Step] {
+        var steps: [Step] = []
+        
+        _ = tripActivities.map { activity in
+            if let step = activity.visit?.step {
+                steps.append(step)
+            }
+            
+            if let journeySteps = activity.journey?.steps {
+                steps.append(contentsOf: journeySteps)
+            }
+        }
+        
+        return steps.sorted()
+    }
+    
     var startDateString: String {
         startDate.formatted(date: .abbreviated, time: .omitted)
     }

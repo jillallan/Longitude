@@ -17,6 +17,10 @@ struct TripDetailView: View {
     var body: some View {
         GeometryReader { geometry in
             Map(position: $position) {
+                ForEach(<#T##Data#>, content: <#T##(Data.Element) -> Content#>)
+            }
+            
+            Map(position: $position) {
                 // TODO: Add annotations for visits and steps
             }
             .safeAreaInset(edge: .bottom) {
