@@ -29,6 +29,7 @@ struct TripDetailView: View {
             
             // TODO: Enable renaming trip
                 .navigationTitle(title)
+                .toolbar(.hidden, for: .tabBar)
         }
     }
 }

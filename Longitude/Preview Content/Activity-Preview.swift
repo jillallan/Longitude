@@ -31,7 +31,7 @@ extension Activity {
         var components = DateComponents()
         let calendar = Calendar.current
         
-        let _ = SampleData.visitDetails.map { (year, month, day, hour, minute, hours, minutes) in
+        let _ = SampleData.activityDetails.map { (year, month, day, hour, minute, hours, minutes) in
             components.year = year
             components.month = month
             components.day = day
@@ -44,13 +44,21 @@ extension Activity {
             modelContext.insert(activity)
 
             // fetch activity to add to visit
-            let fetchDescriptor = FetchDescriptor<Visit>(predicate: #Predicate { visit in
+            let visitFetchDescriptor = FetchDescriptor<Visit>(predicate: #Predicate { visit in
                 visit.arrivalDate == date
             })
             
+            let journeyFetchDescriptor = FetchDescriptor<Journey>(predicate: #Predicate { journey in
+                journey.departureDate == date
+            })
+            
             do {
-                let visit = try modelContext.fetch(fetchDescriptor).first
-                activity.visit = visit
+                if let visit = try modelContext.fetch(visitFetchDescriptor).first {
+                    activity.visit = visit
+                } else if let journey = try modelContext.fetch(journeyFetchDescriptor).first {
+                    activity.journey = journey
+                }
+                
             } catch {
                 fatalError("failed to fetch step to assign to Visit: \(error.localizedDescription)")
             }

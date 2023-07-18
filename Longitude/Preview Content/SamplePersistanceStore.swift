@@ -14,6 +14,7 @@ struct SamplePersistanceStore {
         Placemark.createSampleData(modelContext: modelContext)
         Step.createSampleData(modelContext: modelContext)
         Visit.createSampleData(modelContext: modelContext)
+        Journey.createSampleData(modelContext: modelContext)
         Activity.createSampleData(modelContext: modelContext)
         Trip.createSampleData(modelContext: modelContext)
     }

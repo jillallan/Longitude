@@ -21,14 +21,22 @@ struct ContentView: View {
                 .tabItem {
                     Label("Steps", systemImage: "figure.walk")
                 }
-//            VisitView()
-//                .tabItem {
-//                    Label("Visits", systemImage: "house")
-//                }
-           PlacemarkView()
+            VisitView()
                 .tabItem {
                     Label("Visits", systemImage: "house")
                 }
+            JourneyView()
+                .tabItem {
+                    Label("Journeys", systemImage: "car")
+                }
+            ActivityListView()
+                .tabItem {
+                    Label("Activities", systemImage: "car")
+                }
+//           PlacemarkView()
+//                .tabItem {
+//                    Label("Visits", systemImage: "house")
+//                }
         }
     }
 }

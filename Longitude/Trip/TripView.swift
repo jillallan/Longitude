@@ -45,7 +45,7 @@ struct TripView: View {
             .navigationTitle("Trips")
             .navigationDestination(for: Trip.self) { trip in
                 // FIXME: Move nil coaloesing to Trip model and add sorting
-                TripDetailView(title: trip.title, activities: trip.activities ?? [])
+                TripDetailView(title: trip.title, activities: trip.tripActivities)
             }
             .toolbar {
                 Button {

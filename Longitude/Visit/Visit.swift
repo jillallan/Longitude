@@ -28,3 +28,10 @@ final class Visit {
         self.departureDate = departureDate
     }
 }
+
+// Added comparable comformance to enable sorting by arrivalDate
+//extension Visit: Comparable {
+//    public static func < (lhs: Visit, rhs: Visit) -> Bool {
+//        lhs.arrivalDate < rhs.arrivalDate
+//    }
+//}

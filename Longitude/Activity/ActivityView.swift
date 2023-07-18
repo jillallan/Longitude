@@ -18,11 +18,11 @@ struct ActivityView: View {
                         VisitCard(visit: visit)
                             .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
                     } else if let journey = activity.journey {
-                        VStack {
-                            // TODO: Adjust date based on length of visit
-                            Text(journey.arrivalDate.formatted(date: .abbreviated, time: .shortened))
-                            // TODO: Foreach for steps
-                        }
+                        JourneyCard(journey: journey)
+                            .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
+
+//                            // TODO: Adjust date based on length of visit
+//                            // TODO: Foreach for steps
                     }
                 }
             }

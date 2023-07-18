@@ -18,6 +18,7 @@ final class Activity {
     // MARK: - Relationships
     var visit: Visit?
     var journey: Journey?
+    var trip: Trip?
     
     // MARK: - Initialization
     init(timestamp: Date) {

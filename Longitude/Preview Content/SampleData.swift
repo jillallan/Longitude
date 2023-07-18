@@ -9,7 +9,7 @@ import Foundation
 
 struct SampleData {
     static let locations = [
-        (2016, 7, 01, 8, 6, 51.436027524806505, -2.597474502627349, "St Johns Lane, Bedminster, Bristol BS3 5BA, England"),
+        (2016, 7, 28, 8, 6, 51.436027524806505, -2.597474502627349, "St Johns Lane, Bedminster, Bristol BS3 5BA, England"),
         (2016, 7, 28, 8, 27, 51.436027524806505, -2.597474502627349, "Bedminster Station, Bristol, England"),
         (2016, 7, 28, 9, 30, 51.44966757913053, -2.5831726111207156, "Temple Meads Station, Bristol, England"),
         (2016, 7, 28, 9, 41, 51.37782769397433, -2.3569045449589785, "Bath Spa Station, Bath, England"),
@@ -26,10 +26,18 @@ struct SampleData {
     ]
     
     static let visitDetails = [
-        (2016, 7, 28, 8, 0, 0, 7),  // St Johns Lane
+        (2016, 7, 28, 8, 0, 0, 10),  // St Johns Lane
         (2016, 7, 28, 8, 20, 0, 10),  // Bedminster Station
         (2016, 7, 28, 8, 40, 0, 55),  // Temple Meads
         (2016, 7, 28, 11, 7, 0, 5),  // Paddington
         (2016, 7, 28, 11, 24, 1, 0),  // St Pancras
     ]
+    
+    static let journeyDetails = [
+        (2016, 7, 28, 8, 31, 0, 9),  // Bedminster to Temple Meads
+        (2016, 7, 28, 9, 35, 1, 40),  // Temple Meads to Paddington
+        (2016, 7, 28, 11, 12, 0, 20),  // Paddington to St Pancras
+    ]
+    
+    static let activityDetails = visitDetails + journeyDetails
 }

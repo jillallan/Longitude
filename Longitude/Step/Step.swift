@@ -22,6 +22,8 @@ final class Step {
     
     // MARK: - Relationships
     var placemark: Placemark?
+    var journey: Journey?
+    var visit: Visit?
     
     // MARK: - Computed Properties
     var title: String {

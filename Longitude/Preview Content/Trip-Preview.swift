@@ -46,8 +46,21 @@ extension Trip {
             let startDate = calendar.date(from: components) ?? Date.now
             let endDate = calendar.date(byAdding: .day, value: days, to: startDate) ?? Date.now
             
-            let step = Trip(startDate: startDate, endDate: endDate, title: title)
-            modelContext.insert(step)
+            let trip = Trip(startDate: startDate, endDate: endDate, title: title)
+            modelContext.insert(trip)
+            
+            let fetchDescriptor = FetchDescriptor<Activity>(predicate: #Predicate { activity in
+                activity.timestamp >= startDate && activity.timestamp <= endDate
+            })
+            
+            do {
+                let activities = try modelContext.fetch(fetchDescriptor)
+                _ = activities.map { activity in
+                    activity.trip = trip
+                }
+            } catch {
+                fatalError("failed to fetch steps to assign to Journey: \(error.localizedDescription)")
+            }
         }
     }
 }
