@@ -16,6 +16,8 @@
 		78B8BDB92A5554800047F751 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDB82A5554800047F751 /* Date-Extension.swift */; };
 		78B8BDBB2A55571D0047F751 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */; };
 		78B8BDBD2A5740300047F751 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */; };
+		78CC05192A66ED2B0009FC14 /* StepCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC05182A66ED2B0009FC14 /* StepCard.swift */; };
+		78CC051B2A6718A10009FC14 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC051A2A6718A10009FC14 /* ActivityCard.swift */; };
 		78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497932A52E9B5007A489C /* Placemark-Preview.swift */; };
 		78D497962A52EA7A007A489C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497952A52EA7A007A489C /* SampleData.swift */; };
 		78D497992A52F199007A489C /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D497982A52F199007A489C /* PlacemarkView.swift */; };
@@ -84,6 +86,8 @@
 		78B8BDB82A5554800047F751 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		78B8BDBA2A55571D0047F751 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		78B8BDBC2A5740300047F751 /* BaseUITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
+		78CC05182A66ED2B0009FC14 /* StepCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCard.swift; sourceTree = "<group>"; };
+		78CC051A2A6718A10009FC14 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		78D497932A52E9B5007A489C /* Placemark-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placemark-Preview.swift"; sourceTree = "<group>"; };
 		78D497952A52EA7A007A489C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		78D497982A52F199007A489C /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
@@ -187,8 +191,10 @@
 				78E0533B2A4EF76A008781BF /* Activity.swift */,
 				78D4979B2A53F8D9007A489C /* ActivityView.swift */,
 				7863D27A2A6676CF00F603B4 /* ActivityListView.swift */,
+				78CC051A2A6718A10009FC14 /* ActivityCard.swift */,
 				78D497A12A5438A0007A489C /* VisitCard.swift */,
 				7863D2762A65DB7F00F603B4 /* JourneyCard.swift */,
+				78CC05182A66ED2B0009FC14 /* StepCard.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				78D497A22A5438A0007A489C /* VisitCard.swift in Sources */,
 				78E053512A4F6646008781BF /* TripDetailView.swift in Sources */,
 				78E053382A4EDF85008781BF /* Journey.swift in Sources */,
+				78CC051B2A6718A10009FC14 /* ActivityCard.swift in Sources */,
 				7863D2792A6675FE00F603B4 /* JourneyView.swift in Sources */,
 				7863D27B2A6676CF00F603B4 /* ActivityListView.swift in Sources */,
 				78E053342A4EDF79008781BF /* Placemark.swift in Sources */,
@@ -496,6 +503,7 @@
 				78D497992A52F199007A489C /* PlacemarkView.swift in Sources */,
 				78D4979C2A53F8D9007A489C /* ActivityView.swift in Sources */,
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
+				78CC05192A66ED2B0009FC14 /* StepCard.swift in Sources */,
 				78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */,
 				78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */,
 				78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */,

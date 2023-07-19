@@ -5,6 +5,8 @@
 //  Created by Jill Allan on 04/07/2023.
 //
 
+// https://levelup.gitconnected.com/create-custom-view-components-in-swiftui-845b65e8ba94
+
 import SwiftUI
 
 struct VisitCard: View {

@@ -5,19 +5,28 @@
 //  Created by Jill Allan on 03/07/2023.
 //
 
+import MapKit
 import SwiftData
 import SwiftUI
 
 struct StepView: View {
     @Query(sort: \.timestamp) private var steps: [Step]
+    @State private var position: MapCameraPosition = .automatic
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(steps) { step in
-                    HStack {
-                        Text(step.title)
-                        Text(step.placemarkName)
+            VStack {
+                List {
+                    ForEach(steps) { step in
+                        HStack {
+                            Text(step.title)
+                            Text(step.placemarkName)
+                        }
+                    }
+                }
+                Map(position: $position) {
+                    ForEach(steps) { step in
+                        Marker(step.placemarkName, coordinate: step.coordinate)
                     }
                 }
             }

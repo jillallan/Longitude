@@ -11,6 +11,27 @@ struct ActivityView: View {
     let activities: [Activity]
     
     var body: some View {
+        
+        
+//        ScrollView(.horizontal) {
+//            LazyHStack {
+//                ForEach(activities) { activity in
+//                    if let journey = activity.journey {
+//                        
+//                        Section {
+//                            ForEach(journey.journeySteps) { step in
+//                                StepCard(step: step)
+//                            }
+//                        } header: {
+//                            JourneyCard(journey: journey)
+//                        }
+//                    }
+//                }
+//            }
+//            .scrollTargetLayout()
+//        }
+                       
+        
         ScrollView(.horizontal) {
             LazyHStack {
                 ForEach(activities) { activity in
