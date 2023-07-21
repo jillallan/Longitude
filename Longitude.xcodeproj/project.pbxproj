@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785C14B52A6806CD008FF6CA /* TripOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C14B42A6806CD008FF6CA /* TripOverviewCard.swift */; };
+		785C14BD2A6AC2AB008FF6CA /* JourneyStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C14BC2A6AC2AB008FF6CA /* JourneyStepView.swift */; };
 		7863D2752A65D83900F603B4 /* Journey-Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7863D2742A65D83900F603B4 /* Journey-Preview.swift */; };
 		7863D2772A65DB7F00F603B4 /* JourneyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7863D2762A65DB7F00F603B4 /* JourneyCard.swift */; };
 		7863D2792A6675FE00F603B4 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7863D2782A6675FE00F603B4 /* JourneyView.swift */; };
@@ -76,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		785C14B42A6806CD008FF6CA /* TripOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverviewCard.swift; sourceTree = "<group>"; };
+		785C14BC2A6AC2AB008FF6CA /* JourneyStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyStepView.swift; sourceTree = "<group>"; };
 		7863D2742A65D83900F603B4 /* Journey-Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Journey-Preview.swift"; sourceTree = "<group>"; };
 		7863D2762A65DB7F00F603B4 /* JourneyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCard.swift; sourceTree = "<group>"; };
 		7863D2782A6675FE00F603B4 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
@@ -194,7 +198,9 @@
 				78CC051A2A6718A10009FC14 /* ActivityCard.swift */,
 				78D497A12A5438A0007A489C /* VisitCard.swift */,
 				7863D2762A65DB7F00F603B4 /* JourneyCard.swift */,
+				785C14BC2A6AC2AB008FF6CA /* JourneyStepView.swift */,
 				78CC05182A66ED2B0009FC14 /* StepCard.swift */,
+				785C14B42A6806CD008FF6CA /* TripOverviewCard.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				78E0533C2A4EF76A008781BF /* Activity.swift in Sources */,
 				78E053312A4EDDA4008781BF /* CLLocationCoordinate2D-Extension.swift in Sources */,
 				78E0532E2A4EDBAF008781BF /* Step.swift in Sources */,
+				785C14B52A6806CD008FF6CA /* TripOverviewCard.swift in Sources */,
 				78E053442A4F16C0008781BF /* Trip-Preview.swift in Sources */,
 				78E053482A4F292F008781BF /* TripView.swift in Sources */,
 				78E053402A4F0371008781BF /* SamplePersistanceStore.swift in Sources */,
@@ -505,6 +512,7 @@
 				78E053042A4ED5C9008781BF /* ContentView.swift in Sources */,
 				78CC05192A66ED2B0009FC14 /* StepCard.swift in Sources */,
 				78E0534A2A4F2BC4008781BF /* TripCard.swift in Sources */,
+				785C14BD2A6AC2AB008FF6CA /* JourneyStepView.swift in Sources */,
 				78E053552A4F6AFD008781BF /* Step-Preview.swift in Sources */,
 				78D497942A52E9B5007A489C /* Placemark-Preview.swift in Sources */,
 				7863D2752A65D83900F603B4 /* Journey-Preview.swift in Sources */,

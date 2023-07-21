@@ -11,12 +11,13 @@ struct TripCard: View {
     let title: String
     let startDate: String
     let endDate: String
+    @State var aspectRatio: Double
     
     var body: some View {
         Image(.mongolia)
             .resizable()
             .scaledToFill()
-            .cardStyle(aspectRatio: 1.0, cornerRadius: 25.0)
+            .cardStyle(aspectRatio: aspectRatio, cornerRadius: 25.0)
             .overlay {
                 TripCardOverlay(title: title, startDate: startDate, endDate: endDate)
             }
@@ -25,7 +26,7 @@ struct TripCard: View {
 
 struct TripCard_Previews: PreviewProvider {
     static var previews: some View {
-        TripCard(title: Trip.preview.title, startDate: Trip.preview.startDateString, endDate: Trip.preview.endDateString)
+        TripCard(title: Trip.preview.title, startDate: Trip.preview.startDateString, endDate: Trip.preview.endDateString, aspectRatio: 1.0)
     }
 }
 

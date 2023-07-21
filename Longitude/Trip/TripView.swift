@@ -28,7 +28,8 @@ struct TripView: View {
                             TripCard(
                                 title: trip.title,
                                 startDate: trip.startDateString,
-                                endDate: trip.endDateString
+                                endDate: trip.endDateString,
+                                aspectRatio: 1.0
                             )
                             .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
                         }

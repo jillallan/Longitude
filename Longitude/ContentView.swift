@@ -29,14 +29,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Journeys", systemImage: "car")
                 }
-            ActivityListView()
-                .tabItem {
-                    Label("Activities", systemImage: "car")
-                }
-//           PlacemarkView()
-//                .tabItem {
-//                    Label("Visits", systemImage: "house")
-//                }
         }
     }
 }
