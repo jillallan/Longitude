@@ -12,7 +12,7 @@ struct TripView: View {
     
     // MARK: - Properties
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \.startDate, order: .reverse) private var trips: [Trip]
+    @Query(sort: \Trip.startDate, order: .reverse) private var trips: [Trip]
     @State private var isAddTripViewPresented: Bool = false
     @State private var navPath = NavigationPath()
 //    @State private var trip: Trip?
@@ -40,13 +40,12 @@ struct TripView: View {
             .safeAreaPadding(.horizontal, 20)
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
-            .scrollPosition(initialAnchor: .trailing)
             
             // MARK: - Navigation
             .navigationTitle("Trips")
             .navigationDestination(for: Trip.self) { trip in
-                // FIXME: Move nil coaloesing to Trip model and add sorting
-                TripDetailView(title: trip.title, activities: trip.tripActivities, steps: trip.steps)
+//                TripDetailView(title: trip.title, activities: trip.tripActivities, tripID: trip.tripID, steps: trip.steps)
+                TripDetailView(trip: trip)
             }
             .toolbar {
                 Button {

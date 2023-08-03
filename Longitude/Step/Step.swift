@@ -43,6 +43,7 @@ final class Step {
         self.altitude = altitude
         self.horizontalAccuracy = horizontalAccuracy
         self.verticalAccuracy = verticalAccuracy
+        
         self.day = Calendar.current.startOfDay(for: timestamp)
     }
     

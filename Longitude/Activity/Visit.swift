@@ -18,6 +18,8 @@ final class Visit {
     // MARK: - Relationships
     var step: Step?
     var activity: Activity?
+    var arrivalJourney: Journey?
+    var departureJourney: Journey?
     
     // MARK: - Computed Properties
     // TODO: Add stringArrivalDate and stringDepartureDate

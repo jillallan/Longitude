@@ -2,47 +2,68 @@
 //  JourneyCard.swift
 //  Longitude
 //
-//  Created by Jill Allan on 17/07/2023.
+//  Created by Jill Allan on 03/08/2023.
 //
 
+import SwiftData
 import SwiftUI
 
 struct JourneyCard: View {
-    let journey: Journey
-    @State private var aspectRatio = 1.5
-    @State private var isListScrollable: Bool = false
+
+    @Environment(\.modelContext) private var modelContext
+    let journeys: [Journey]
+    @State var scrolledID: PersistentIdentifier?
+    @Binding var scrolledSteps: [Step]
     
-    @State private var currentAmount = CGFloat.zero
-    @State private var startAmount = 50.0
+    @State private var aspectRatio = 1.5
+    @State private var cornerRadius = 25.0
     
     var body: some View {
-        
         VStack {
-            Image(.london)
-                .resizable()
-                .scaledToFill()
-                .cardStyle(aspectRatio: 1.5, cornerRadius: 25)
-                .overlay {
-                    VStack(alignment: .leading) {
-                        Spacer()
-                        // TODO: Adjust date based on length of visit
-                        Text(journey.departureDate.formatted(date: .abbreviated, time: .shortened))
-                        Text("New journey")
+            ScrollView {
+                LazyVStack {
+                    ForEach(journeys) { journey in
+                        Section {
+                            ForEach(journey.journeySteps) { step in
+                                StepCardSimple(step: step)
+                            }
+                        } header: {
+                            JourneyCardHeader(journey: journey)
+                        } footer: {
+                            VStack {
+                                Spacer()
+                                Text("Journey Metadata")
+                                Spacer()
+                            }
+                            .padding(50)
+                        }
                     }
-                    .foregroundStyle(.white)
-                    .padding()
                 }
-                .overlay {
-                    JourneyStepView(journey: journey)
-                }
+                .scrollTargetLayout()
+            }
+            .scrollPosition(id: $scrolledID)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .circular))
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(Color.white)
+        .aspectRatio(aspectRatio, contentMode: .fit)
+        .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .circular))
+        .onChange(of: scrolledID) { oldValue, newValue in
+            scrolledSteps = updateSteps(newID: newValue)
+        }
     }
-}
-
-struct JourneyCard_Previews: PreviewProvider {
-    static var previews: some View {
-        JourneyCard(journey: .preview)
+        
+    func updateSteps(newID: PersistentIdentifier?) -> [Step] {
+        if let newID {
+            if newID.entityName == "Journey" {
+                let journey = modelContext.object(with: newID) as! Journey
+                return journey.journeySteps
+                
+            } else if newID.entityName == "Step" {
+                let step = modelContext.object(with: newID) as! Step
+                return [step]
+            }
+        }
+        return []
     }
 }
 

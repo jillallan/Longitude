@@ -20,6 +20,21 @@ final class Activity {
     var journey: Journey?
     var trip: Trip?
     
+    // MARK: - Computed Properties
+    var steps: [Step] {
+        var steps: [Step] = []
+        
+        if let step = visit?.step {
+            steps.append(step)
+        }
+        
+        if let journeySteps = journey?.steps {
+            steps.append(contentsOf: journeySteps)
+        }
+        
+        return steps
+    }
+    
     // MARK: - Initialization
     init(timestamp: Date) {
         self.timestamp = timestamp

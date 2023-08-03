@@ -12,6 +12,7 @@ import SwiftData
 final class Trip {
     
     // MARK: - Properties
+    var tripID = UUID()
     var startDate: Date
     var endDate: Date
     var title: String

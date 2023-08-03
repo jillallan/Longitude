@@ -11,21 +11,17 @@ struct VisitCard: View {
     let visit: Visit
     
     var body: some View {
-        Image(.mongolia)
-            .resizable()
-            .scaledToFill()
-            .cardStyle(aspectRatio: 1.5, cornerRadius: 25)
-            .overlay {
-                VStack(alignment: .leading) {
-                    Spacer()
-                    // TODO: Adjust date based on length of visit
-                    Text(visit.arrivalDate.formatted(date: .abbreviated, time: .shortened))
-                    Text(visit.step?.placemark?.name ?? "New visit")
-                }
-                .fontWeight(.light)
-                .foregroundStyle(.white)
-                .padding()
+        Card(image: .mongolia, aspectRatio: 1.5, cornerRadius: 25.0) {
+            VStack(alignment: .leading) {
+                Spacer()
+                // TODO: Adjust date based on length of visit
+                Text(visit.arrivalDate.formatted(date: .abbreviated, time: .shortened))
+                Text(visit.step?.placemark?.name ?? "New visit")
             }
+            .fontWeight(.light)
+            .foregroundStyle(.white)
+            .padding()
+        }
     }
 }
 

@@ -46,6 +46,30 @@ extension Journey {
             
             let journey = Journey(departureDate: departureDate, arrivalDate: arrivalDate)
             modelContext.insert(journey)
+            
+            // fetch departure visit to add to journey based on the date
+            let departureVisitFetchDescriptor = FetchDescriptor<Visit>(predicate: #Predicate { visit in
+                visit.departureDate == departureDate
+            })
+            
+            do {
+                let visit = try modelContext.fetch(departureVisitFetchDescriptor).first
+                journey.departureVisit = visit
+            } catch {
+                fatalError("failed to fetch departureVisit to assign to Journey: \(error.localizedDescription)")
+            }
+            
+            // fetch arrival visit to add to journey based on the date
+            let arrivalVisitFetchDescriptor = FetchDescriptor<Visit>(predicate: #Predicate { visit in
+                visit.arrivalDate == arrivalDate
+            })
+            
+            do {
+                let visit = try modelContext.fetch(arrivalVisitFetchDescriptor).first
+                journey.arrivalVisit = visit
+            } catch {
+                fatalError("failed to fetch departureVisit to assign to Journey: \(error.localizedDescription)")
+            }
 
             // fetch step to add to journey based on the date
             let fetchDescriptor = FetchDescriptor<Step>(predicate: #Predicate { step in

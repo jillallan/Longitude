@@ -34,9 +34,9 @@ struct SampleData {
     ]
     
     static let journeyDetails = [
-        (2016, 7, 28, 8, 31, 0, 9),  // Bedminster to Temple Meads
-        (2016, 7, 28, 9, 35, 1, 40),  // Temple Meads to Paddington
-        (2016, 7, 28, 11, 12, 0, 20),  // Paddington to St Pancras
+        (2016, 7, 28, 8, 30, 0, 10),  // Bedminster to Temple Meads
+        (2016, 7, 28, 9, 35, 1, 32),  // Temple Meads to Paddington
+        (2016, 7, 28, 11, 12, 0, 12),  // Paddington to St Pancras
     ]
     
     static let activityDetails = visitDetails + journeyDetails

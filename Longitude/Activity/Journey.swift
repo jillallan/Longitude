@@ -18,10 +18,26 @@ final class Journey {
     // MARK: - Relationships
     var steps: [Step]? = []
     var activity: Activity?
+    var departureVisit: Visit?
+    var arrivalVisit: Visit?
     
     // MARK: - Computed Properties
     var journeySteps: [Step] {
-        steps?.sorted() ?? []
+        var tempSteps: [Step] = []
+        
+        if let steps {
+            tempSteps = steps
+        }
+        
+        if let arrivalVisitStep = arrivalVisit?.step {
+            tempSteps.append(arrivalVisitStep)
+        }
+        
+        if let departureVisitStep = departureVisit?.step {
+            tempSteps.append(departureVisitStep)
+        }
+        
+        return tempSteps.sorted()
     }
     
     // MARK: - Initialization

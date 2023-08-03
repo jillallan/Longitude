@@ -10,17 +10,13 @@ import SwiftData
 import SwiftUI
 
 struct TripDetailView: View {
-    
-    let title: String
-    let activities: [Activity]
-    let steps: [Step]
-    
-    @State private var position: MapCameraPosition = .automatic
+    let trip: Trip    
+    @State var position: MapCameraPosition = .automatic
     
     var body: some View {
         GeometryReader { geometry in
             Map(position: $position) {
-                ForEach(steps) { step in
+                ForEach(trip.steps) { step in
                     if step.visit != nil {
                         Annotation("", coordinate: step.coordinate) {
                             Circle()
@@ -37,24 +33,24 @@ struct TripDetailView: View {
                         }
                     }
                 }
-                MapPolyline(coordinates: steps.map(\.coordinate))
+                MapPolyline(coordinates: trip.steps.map(\.coordinate))
                     .stroke(.indigo, lineWidth: 3)
             }
-            
             .safeAreaInset(edge: .bottom) {
-                ActivityView(title: title, activities: activities)
-                
-                // TODO: Add dynamic heigh
+                ActivityView(trips: [trip], position: $position)
+                // TODO: Add dynamic height - based on number of items in grid and aspect ratio
                     .frame(height: geometry.size.width / 1.5)
             }
-
-            // TODO: Add scroll view for visits and jorneys.  Click on a journey to get steps for the journey and edit them
             
             // TODO: Enable renaming trip
-                .navigationTitle(title)
+            .navigationTitle(trip.title)
                 .toolbar(.hidden, for: .tabBar)
-//                .environment(\.mainWindowSize, geometry.size)
         }
+    }
+    
+    func updateMapPosition() -> MapCameraPosition {
+        
+        return MapCameraPosition.automatic
     }
 }
 

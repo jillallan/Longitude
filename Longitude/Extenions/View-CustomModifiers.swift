@@ -23,6 +23,7 @@ struct cardModifier: ViewModifier {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             .clipped(antialiased: true)
             .aspectRatio(aspectRatio, contentMode: .fit)
-            .cornerRadius(cornerRadius)
+//            .cornerRadius(cornerRadius)
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .circular))
     }
 }

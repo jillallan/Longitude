@@ -24,7 +24,7 @@ final class LongitudeUITests: BaseUITestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testAddingTrip_IncreasesTripsByOne() throws {
+    func testAddingTrip_OpensTripViewWithTripTitle() throws {
         let randomDateRangeStartDate = Calendar.current.date(byAdding: .year, value: -10, to: Date.now) ?? Date.now
         let startDate = Date.random(in: randomDateRangeStartDate...Date.now)
         let endDate = Date.random(in: startDate...Date.now)

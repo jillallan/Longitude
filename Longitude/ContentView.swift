@@ -17,18 +17,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Trips", systemImage: "suitcase")
                 }
-            StepView()
-                .tabItem {
-                    Label("Steps", systemImage: "figure.walk")
-                }
-            VisitView()
-                .tabItem {
-                    Label("Visits", systemImage: "house")
-                }
-            JourneyView()
-                .tabItem {
-                    Label("Journeys", systemImage: "car")
-                }
         }
     }
 }

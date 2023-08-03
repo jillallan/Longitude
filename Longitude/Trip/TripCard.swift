@@ -14,13 +14,9 @@ struct TripCard: View {
     @State var aspectRatio: Double
     
     var body: some View {
-        Image(.mongolia)
-            .resizable()
-            .scaledToFill()
-            .cardStyle(aspectRatio: aspectRatio, cornerRadius: 25.0)
-            .overlay {
-                TripCardOverlay(title: title, startDate: startDate, endDate: endDate)
-            }
+        Card(image: .mongolia, aspectRatio: aspectRatio, cornerRadius: 25.0) {
+            TripCardOverlay(title: title, startDate: startDate, endDate: endDate)
+        }
     }
 }
 
