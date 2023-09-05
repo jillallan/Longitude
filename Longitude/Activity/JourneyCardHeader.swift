@@ -12,7 +12,7 @@ struct JourneyCardHeader: View {
     
     var body: some View {
         VStack {
-            Card(image: .london, aspectRatio: 2.0, cornerRadius: 0.0) {
+            Card(imageResource: .london, aspectRatio: 2.0, cornerRadius: 0.0) {
                 VStack(alignment: .leading) {
                     
                     // TODO: Adjust date based on length of visit

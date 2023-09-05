@@ -11,7 +11,6 @@ import SwiftData
 @Model
 final class Trip: CustomDebugStringConvertible {
     
-    
     // MARK: - Properties
     var tripID = UUID()
     var startDate: Date
