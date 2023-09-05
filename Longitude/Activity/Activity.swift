@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Activity {
+final class Activity: CustomDebugStringConvertible {
     
     // MARK: - Properties
 //    var start
@@ -28,11 +28,38 @@ final class Activity {
             steps.append(step)
         }
         
-        if let journeySteps = journey?.steps {
+        if let journeySteps = journey?.journeySteps {
             steps.append(contentsOf: journeySteps)
         }
         
         return steps
+    }
+    
+    enum type {
+        case visit
+        case journey
+        case empty
+    }
+    
+    var activityType: type {
+        if visit != nil {
+            return type.visit
+        }
+        if journey != nil {
+            return type.journey
+        }
+        return type.empty
+    }
+    
+    var debugDescription: String {
+        if activityType == .visit {
+            return "Visit at \(timestamp)"
+        }
+        if activityType == .journey {
+            return "Journey at \(timestamp)"
+        }
+        return "No activity at \(timestamp)"
+
     }
     
     // MARK: - Initialization

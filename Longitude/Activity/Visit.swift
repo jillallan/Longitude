@@ -31,9 +31,9 @@ final class Visit {
     }
 }
 
-// Added comparable comformance to enable sorting by arrivalDate
-//extension Visit: Comparable {
-//    public static func < (lhs: Visit, rhs: Visit) -> Bool {
-//        lhs.arrivalDate < rhs.arrivalDate
-//    }
-//}
+// Added comparable comformance to enable sorting by arrivalDate, for checkSampleStore
+extension Visit: Comparable {
+    public static func < (lhs: Visit, rhs: Visit) -> Bool {
+        lhs.arrivalDate < rhs.arrivalDate
+    }
+}

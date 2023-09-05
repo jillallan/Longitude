@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Journey {
+final class Journey: CustomDebugStringConvertible {
     
     // MARK: - Properties
     var departureDate: Date
@@ -40,9 +40,20 @@ final class Journey {
         return tempSteps.sorted()
     }
     
+    var debugDescription: String {
+        "Journey from \(departureDate) to \(arrivalDate)"
+    }
+    
     // MARK: - Initialization
     init(departureDate: Date, arrivalDate: Date) {
         self.departureDate = departureDate
         self.arrivalDate = arrivalDate
+    }
+}
+
+// Added comparable comformance to enable sorting by departureDate, for checkSampleStore
+extension Journey: Comparable {
+    public static func < (lhs: Journey, rhs: Journey) -> Bool {
+        lhs.departureDate < rhs.departureDate
     }
 }

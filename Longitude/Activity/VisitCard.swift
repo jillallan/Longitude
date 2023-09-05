@@ -5,13 +5,17 @@
 //  Created by Jill Allan on 04/07/2023.
 //
 
+import OSLog
 import SwiftUI
 
 struct VisitCard: View {
+    
+    private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: Self.self))
+    
     let visit: Visit
     
     var body: some View {
-        Card(image: .mongolia, aspectRatio: 1.5, cornerRadius: 25.0) {
+        Card(imageResource: .mongolia, aspectRatio: 1.5, cornerRadius: 25.0) {
             VStack(alignment: .leading) {
                 Spacer()
                 // TODO: Adjust date based on length of visit

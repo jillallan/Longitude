@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import OSLog
 import SwiftData
 
 struct SamplePersistanceStore {
+    
     @MainActor
     static func createData(modelContext: ModelContext) {
         Placemark.createSampleData(modelContext: modelContext)
@@ -17,5 +19,8 @@ struct SamplePersistanceStore {
         Journey.createSampleData(modelContext: modelContext)
         Activity.createSampleData(modelContext: modelContext)
         Trip.createSampleData(modelContext: modelContext)
+        
+        _ = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: Self.self))
+    
     }
 }

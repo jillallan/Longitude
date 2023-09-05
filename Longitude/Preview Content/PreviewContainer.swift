@@ -14,9 +14,14 @@ struct PreviewContainer {
     static var preview: ModelContainer = {
         do {
             let container = try ModelContainer(
-                for: [Step.self, Trip.self],
-                ModelConfiguration(inMemory: true)
+                for: Schema([Trip.self]),
+                configurations: [ModelConfiguration(isStoredInMemoryOnly: true)]
             )
+            
+//            let container = try ModelContainer(
+//                for: [Step.self, Trip.self],
+//                ModelConfiguration(inMemory: true)
+//            )
             
             SamplePersistanceStore.createData(modelContext: container.mainContext)
 

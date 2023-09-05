@@ -9,7 +9,8 @@ import Foundation
 import SwiftData
 
 @Model
-final class Trip {
+final class Trip: CustomDebugStringConvertible {
+    
     
     // MARK: - Properties
     var tripID = UUID()
@@ -23,6 +24,10 @@ final class Trip {
     // MARK: - Computed Properties
     var tripActivities: [Activity] {
         activities?.sorted() ?? []
+    }
+    
+    var debugDescription: String {
+        "Trip named: \(title)"
     }
     
     var steps: [Step] {

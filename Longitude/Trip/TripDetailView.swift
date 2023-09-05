@@ -6,14 +6,22 @@
 //
 
 import MapKit
+import OSLog
 import SwiftData
 import SwiftUI
 
 struct TripDetailView: View {
-    let trip: Trip    
+    
+    private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: Self.self))
+    
+    let trip: Trip
+//    @State var coordinates: [CLLocationCoordinate2D]?
+    @State var visibleSteps: [Step] = []
     @State var position: MapCameraPosition = .automatic
     
     var body: some View {
+        let _ = logger.debug("TripDetailsView Steps: \(visibleSteps)")
+        
         GeometryReader { geometry in
             Map(position: $position) {
                 ForEach(trip.steps) { step in
@@ -37,20 +45,59 @@ struct TripDetailView: View {
                     .stroke(.indigo, lineWidth: 3)
             }
             .safeAreaInset(edge: .bottom) {
-                ActivityView(trips: [trip], position: $position)
+                ActivityView(trips: [trip], visibleSteps: $visibleSteps)
+            
                 // TODO: Add dynamic height - based on number of items in grid and aspect ratio
                     .frame(height: geometry.size.width / 1.5)
             }
             
             // TODO: Enable renaming trip
             .navigationTitle(trip.title)
-                .toolbar(.hidden, for: .tabBar)
+//                .toolbar(.hidden, for: .tabBar)
         }
+        .onChange(of: visibleSteps) {
+            withAnimation {
+                position = updateMapPosition(for: visibleSteps)
+            }
+        }
+//        .onChange(of: coordinates) { oldValue, newValue in
+//            if let newValue {
+//                logger.debug("Trip detail view coordinates changed")
+//                withAnimation {
+//                    position = updateMapPosition(for: newValue)
+//                }
+//            }
+//        }
     }
     
-    func updateMapPosition() -> MapCameraPosition {
+    func updateMapPosition(for steps: [Step]) -> MapCameraPosition {
+        logger.debug("\(#function): \(String(describing: steps))")
         
-        return MapCameraPosition.automatic
+//        if let steps {
+            let region = calculateCoordianteRegion(from: steps.map(\.coordinate))
+            return MapCameraPosition.region(region)
+//        }
+        
+//        return MapCameraPosition.automatic
+    }
+    
+    func calculateCoordianteRegion(from coordinates: [CLLocationCoordinate2D]) -> MKCoordinateRegion {
+
+        let minLatitude = coordinates.map(\.latitude).min() ?? 0.0
+        let maxLatitude = coordinates.map(\.latitude).max() ?? 0.0
+        let minLongitude = coordinates.map(\.longitude).min() ?? 0.0
+        let maxLongitude = coordinates.map(\.longitude).max() ?? 0.0
+        
+        let center = CLLocationCoordinate2D(
+            latitude: (minLatitude + maxLatitude) / 2,
+            longitude: (minLongitude + maxLongitude) / 2
+        )
+        
+        let span = MKCoordinateSpan(
+            latitudeDelta: (maxLatitude - minLatitude) == 0 ? 0.002 : (maxLatitude - minLatitude) * 1.5,
+            longitudeDelta: (maxLongitude - minLongitude) == 0 ? 0.002 : (maxLongitude - minLongitude) * 1.5
+        )
+        return MKCoordinateRegion(center: center, span: span)
     }
 }
 

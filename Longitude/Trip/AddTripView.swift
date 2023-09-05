@@ -31,13 +31,15 @@ struct AddTripView: View {
             }
             .navigationTitle("Add New Trip")
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+//                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem {
                     Button("Save") {
                         dismiss()
                         addTrip()
                     }
                 }
-                ToolbarItem(placement: .topBarLeading) {
+//                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem {
                     Button("Cancel") {
                         dismiss()
                     }

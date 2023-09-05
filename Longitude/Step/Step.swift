@@ -29,7 +29,6 @@ final class Step {
     var title: String {
 //        timestamp.formatted(date: .abbreviated, time: .shortened)
         timestamp.formatted(Date.FormatStyle().month(.wide))
-//        timestamp.formatted()
     }
     
     var placemarkName: String {
