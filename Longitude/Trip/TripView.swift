@@ -10,12 +10,13 @@ import SwiftUI
 
 struct TripView: View {
     
-    // MARK: - Properties
+    // MARK: - Data Properties
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Trip.startDate, order: .reverse) private var trips: [Trip]
+    @Query(sort: \Trip.startDate, order: .forward) private var trips: [Trip]
+    
+    // MARK: - Navigation Properties
     @State private var isAddTripViewPresented: Bool = false
     @State private var navPath = NavigationPath()
-//    @State private var trip: Trip?
     
     var body: some View {
         NavigationStack(path: $navPath) {
@@ -44,8 +45,10 @@ struct TripView: View {
             // MARK: - Navigation
             .navigationTitle("Trips")
             .navigationDestination(for: Trip.self) { trip in
-//                TripDetailView(title: trip.title, activities: trip.tripActivities, tripID: trip.tripID, steps: trip.steps)
-                TripDetailView(trip: trip)
+                TripDetailView(trip: trip, navPath: $navPath)
+            }
+            .navigationDestination(for: Step.self) { step in
+                StepDetailView(date: step.timestamp)
             }
             .toolbar {
                 Button {

@@ -20,8 +20,9 @@ struct ActivityView: View {
     @Environment(\.modelContext) private var modelContext
 
     @State private var scrolledID: PersistentIdentifier?
-    
+    @Binding var currentActivity: Activity?
     @Binding var visibleSteps: [Step]
+    @Binding var navPath: NavigationPath
     
     var body: some View {
 //        let _ = print("ActivityView scroll position: \(String(describing: scrolledID))")
@@ -31,7 +32,7 @@ struct ActivityView: View {
                 ForEach(trips) { trip in
                     Section {
                         ForEach(trip.tripActivities) { activity in
-                            ActivityCard(activity: activity, activityViewScrollID: scrolledID, visibleSteps: $visibleSteps)
+                            ActivityCard(activity: activity, activityViewScrollID: scrolledID, visibleSteps: $visibleSteps, navPath: $navPath)
                                 .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
                         }
                         
@@ -52,28 +53,65 @@ struct ActivityView: View {
             withAnimation {
                 visibleSteps = updateSteps(for: scrolledID)
             }
+            currentActivity = updateCurrentActivity(for: scrolledID)
         }
         .environment(\.currentActivityID, scrolledID)
     }
     
-    func updateSteps(for scrollPositionID: PersistentIdentifier?) -> [Step] {
+    
+    
+    func getTrip(scrollPositionID: PersistentIdentifier) -> Trip? {
+        let predicate = #Predicate<Trip> { $0.persistentModelID == scrollPositionID }
+        let fetchDescriptor = FetchDescriptor(predicate: predicate)
+        
+        do {
+            if let trip = try modelContext.fetch(fetchDescriptor).first {
+                return trip
+            }
+        } catch {
+            logger.warning("Failed to fetch journey: \(error.localizedDescription)")
+        }
+    
+        return nil
+    }
+    
+    func getJourney(scrollPositionID: PersistentIdentifier) -> Journey? {
+        let predicate = #Predicate<Journey> { $0.persistentModelID == scrollPositionID }
+        let fetchDescriptor = FetchDescriptor(predicate: predicate)
+        
+        do {
+            if let journey = try modelContext.fetch(fetchDescriptor).first {
+                return journey
+            }
+        } catch {
+            logger.warning("Failed to fetch activity: \(error.localizedDescription)")
+        }
+    
+        return nil
+    }
+    
+    func updateCurrentActivity(for scrollPositionID: PersistentIdentifier?) -> Activity? {
         if let scrollPositionID {
-            
-            if scrollPositionID.entityName == "Trip" {
+            if scrollPositionID.entityName == "Activity" {
                 
-                let predicate = #Predicate<Trip> { $0.persistentModelID == scrollPositionID }
+                let predicate = #Predicate<Activity> { $0.persistentModelID == scrollPositionID }
                 let fetchDescriptor = FetchDescriptor(predicate: predicate)
                 
                 do {
-                    let trip = try modelContext.fetch(fetchDescriptor).first
-                    if let steps = trip?.steps {
-                        return steps
+                    let activity = try modelContext.fetch(fetchDescriptor).first
+                    if let activity {
+                        return activity
                     }
                 } catch {
-                    logger.warning("Failed to fetch journey: \(error.localizedDescription)")
+                    logger.warning("Failed to fetch activity: \(error.localizedDescription)")
                 }
             }
-            
+        }
+        return nil
+    }
+    
+    func updateSteps(for scrollPositionID: PersistentIdentifier?) -> [Step] {
+        if let scrollPositionID {
             if scrollPositionID.entityName == "Activity" {
                 
                 let predicate = #Predicate<Activity> { $0.persistentModelID == scrollPositionID }
@@ -91,7 +129,6 @@ struct ActivityView: View {
         }
         return []
     }
-
 }
 
 private struct CurrentActivityIDKey: EnvironmentKey {

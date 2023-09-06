@@ -35,6 +35,20 @@ final class Activity: CustomDebugStringConvertible {
         return steps
     }
     
+    var activityEndDate: Date {
+        var date = Date.now
+        
+        if let visit {
+            date = visit.departureDate
+        }
+        
+        if let journey {
+            date = journey.arrivalDate
+        }
+        
+        return date
+    }
+    
     enum type {
         case visit
         case journey

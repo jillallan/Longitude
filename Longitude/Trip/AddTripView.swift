@@ -57,7 +57,7 @@ struct AddTripView: View {
 
 //struct AddTripView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        AddTripView()
+//        AddTripView(navPath: .constant(Trip.preview))
 //            .modelContainer(PreviewContainer.preview)
 //    }
 //}

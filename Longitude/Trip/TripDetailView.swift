@@ -17,12 +17,20 @@ struct TripDetailView: View {
     let trip: Trip
 //    @State var coordinates: [CLLocationCoordinate2D]?
     @State var visibleSteps: [Step] = []
+    @State var currentActivity: Activity?
     @State var position: MapCameraPosition = .automatic
+    
+    // MARK: - Navigation Properties
+    @Binding var navPath: NavigationPath
+    @State private var isAddVisitViewPresented: Bool = false
+    @State private var isAddJourneyViewPresented: Bool = false
     
     var body: some View {
         let _ = logger.debug("TripDetailsView Steps: \(visibleSteps)")
+        let _ = logger.debug("Current Activity: \(String(describing: currentActivity?.debugDescription))")
         
         GeometryReader { geometry in
+
             Map(position: $position) {
                 ForEach(trip.steps) { step in
                     if step.visit != nil {
@@ -45,7 +53,7 @@ struct TripDetailView: View {
                     .stroke(.indigo, lineWidth: 3)
             }
             .safeAreaInset(edge: .bottom) {
-                ActivityView(trips: [trip], visibleSteps: $visibleSteps)
+                ActivityView(trips: [trip], currentActivity: $currentActivity, visibleSteps: $visibleSteps, navPath: $navPath)
             
                 // TODO: Add dynamic height - based on number of items in grid and aspect ratio
                     .frame(height: geometry.size.width / 1.5)
@@ -53,32 +61,48 @@ struct TripDetailView: View {
             
             // TODO: Enable renaming trip
             .navigationTitle(trip.title)
-//                .toolbar(.hidden, for: .tabBar)
+            .toolbar(.hidden, for: .tabBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Button {
+                            isAddVisitViewPresented.toggle()
+                        } label: {
+                            Label("Add Visit", systemImage: "house")
+                        }
+                        
+                        Button {
+                            isAddJourneyViewPresented.toggle()
+                        } label: {
+                            Label("Add Journey", systemImage: "car")
+                        }
+                    } label: {
+                        Label("Add Activity", systemImage: "plus")
+                    }
+
+                }
+                
+            }
+            .sheet(isPresented: $isAddVisitViewPresented) {
+                AddVisitView(date: currentActivity?.activityEndDate ?? trip.startDate)
+            }
+            .sheet(isPresented: $isAddJourneyViewPresented) {
+                AddJourneyView(date: currentActivity?.activityEndDate ?? trip.startDate)
+            }
         }
         .onChange(of: visibleSteps) {
             withAnimation {
                 position = updateMapPosition(for: visibleSteps)
             }
         }
-//        .onChange(of: coordinates) { oldValue, newValue in
-//            if let newValue {
-//                logger.debug("Trip detail view coordinates changed")
-//                withAnimation {
-//                    position = updateMapPosition(for: newValue)
-//                }
-//            }
-//        }
     }
+    
     
     func updateMapPosition(for steps: [Step]) -> MapCameraPosition {
         logger.debug("\(#function): \(String(describing: steps))")
         
-//        if let steps {
-            let region = calculateCoordianteRegion(from: steps.map(\.coordinate))
-            return MapCameraPosition.region(region)
-//        }
-        
-//        return MapCameraPosition.automatic
+        let region = calculateCoordianteRegion(from: steps.map(\.coordinate))
+        return MapCameraPosition.region(region)
     }
     
     func calculateCoordianteRegion(from coordinates: [CLLocationCoordinate2D]) -> MKCoordinateRegion {

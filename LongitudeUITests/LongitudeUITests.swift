@@ -52,6 +52,31 @@ final class LongitudeUITests: BaseUITestCase {
 
     }
     
+    func testSomwthing() throws {
+        
+        let scrollViewsQuery = XCUIApplication().scrollViews
+        scrollViewsQuery.otherElements.buttons["Bedminster to Moscow, Jul 28, 2016 - Aug 1, 2016"].images["mongolia"].tap()
+        
+        let mongoliaImage = scrollViewsQuery.children(matching: .other).element.children(matching: .other).element.children(matching: .image).matching(identifier: "mongolia").element(boundBy: 2)
+//        mongoliaImage.swipeLeft()
+
+        // https://medium.com/quality-engineering-university/xcuitests-how-to-find-matching-element-76e65371fe74
+        let mapItems = app
+            .descendants(matching: .other)
+            .matching(NSPredicate(format: "label == 'Map pin'"))
+            .allElementsBoundByIndex
+        
+        print(mapItems)
+        let mapItemsCount = mapItems.count
+        print(mapItemsCount)
+        
+        // https://stackoverflow.com/questions/42507065/ios-uitests-how-to-get-xcuielement-list-which-exist-in-current-view
+//        let allElements = app.otherElements.allElementsBoundByIndex
+//        print("allElements: \(allElements)")
+
+        XCTAssertEqual(14, mapItemsCount)
+        
+    }
    
     
     func pickDate(date: Date) {

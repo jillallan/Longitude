@@ -19,13 +19,14 @@ struct ActivityCard: View {
 
     let activityViewScrollID: PersistentIdentifier?
     @Binding var visibleSteps: [Step]
+    @Binding var navPath: NavigationPath
     @Environment(\.currentActivityID) private var activityViewID
     
     
     var body: some View {
         VStack {
             if let journey = activity.journey {
-                JourneyCard(journeys: [journey], activityObjectID: activity.persistentModelID, visibleSteps: $visibleSteps, activityViewScrollID: activityViewScrollID)
+                JourneyCard(journeys: [journey], activityObjectID: activity.persistentModelID, visibleSteps: $visibleSteps, activityViewScrollID: activityViewScrollID, navPath: $navPath)
 
             } else if let visit = activity.visit {
                 VisitCard(visit: visit)

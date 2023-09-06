@@ -5,7 +5,7 @@
 //  Created by Jill Allan on 24/07/2023.
 //
 
-import UIKit
+
 import SwiftUI
 
 struct Card<Content: View>: View {
